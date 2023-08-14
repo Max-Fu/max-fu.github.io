@@ -21,10 +21,11 @@
                 <name>Letian (Max) Fu</name>
               </p>
               <p>
-                I am an incoming PhD student in EECS at the University of California, Berkeley. I am currently a 5th Year Master student advised by Professor <a href="https://goldberg.berkeley.edu/">Ken Goldberg</a>. My research interests are Robotics and Computer Vision. 
+                I am a first year PhD student at UC Berkeley advised by Professor <a href="https://goldberg.berkeley.edu/">Ken Goldberg</a>. 
+                I am interested in building self-supervised multi-modal models and using them in a robotics setting. 
               </p>
               <p>
-                I received my B.A. in Computer Science and Applied Mathematics from the University of California, Berkeley in 2022. I was an undergraduate student instructor for Professor Sergey Levine's <a href="https://cs182sp21.github.io/">CS W182</a>. Before I joined AUTOLAB, I was a machine learning intern at Apple. 
+                I received B.A./M.S. in Computer Science and Applied Mathematics from UC Berkeley in 2023. 
               </p>
               <p style="text-align:center">
                 <a href="mailto:max.fu.letian@berkeley.edu">Email</a> &nbsp/&nbsp
@@ -47,6 +48,51 @@
           </tr>
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody> 
+
+          <!-- RPT -->
+          <tr onmouseout="rpt_stop()" onmouseover="rpt_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <!-- IMAGES -->
+              <div class="one">
+                <div class="two" id='rpt_splash_2'>
+                  <video  width=115% height=100% muted autoplay loop>
+                    <source src="images/rpt_splash_2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <video  width=115% height=100% muted autoplay loop id="rpt_splash_1">
+                  <source src="images/rpt_splash_1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <!-- SCRIPT FOR HOVERING -->
+              <script type="text/javascript">
+                function rpt_start() {
+                  document.getElementById('rpt_splash_1').style.opacity = "0";
+                  document.getElementById('rpt_splash_2').style.opacity = "1";
+                }
+
+                function rpt_stop() {
+                  document.getElementById('rpt_splash_1').style.opacity = "1";
+                  document.getElementById('rpt_splash_2').style.opacity = "0";
+                }
+                rpt_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <!-- TITLE -->
+              <papertitle><a href="https://robotic-pretrained-transformer.github.io/">Robot Learning with Sensorimotor Pre-training</a></papertitle>
+              <br>
+              <!-- AUTHORS -->
+              Ilija Radosavovic, Baifeng Shi, <b>Letian Fu</b>, Ken Goldberg, Trevor Darrell, Jitendra Malik
+              <br>
+              <!-- CONFERENCE -->
+              <em>Arxiv</em>, <a href="https://arxiv.org/abs/2210.01340">arXiv</a>
+              <p></p>
+              <!-- SUMMARY -->
+              We introduce a self-supervised sensorimotor pre-training method for robotics using a Transformer model called RPT. It encodes sequences of images, robot states, and actions into tokens and trains to predict masked content, enabling the robot to model the physical world. RPT operates on latent visual data, scales to 10x larger models, and allows 10 Hz inference. Through evaluation on 20,000 real-world trajectories collected over 9 months, RPT consistently outperforms basic training, doubles improvements in block stacking, and shows beneficial scaling characteristics.
+            </td>
+          </tr>
 
           <!-- TacInsertion -->
           <tr onmouseout="tacinsert_stop()" onmouseover="tacinsert_start()">
@@ -79,7 +125,7 @@
               <b>Letian Fu</b>, Huang Huang, Lars Berscheid, Hui Li, Ken Goldberg, Sachin Chitta,
               <br>
               <!-- CONFERENCE -->
-              <em>ICRA</em> 2023 (Accepted), <a href="https://arxiv.org/abs/2210.01340">arXiv</a>
+              <em>ICRA</em> 2023, <a href="https://arxiv.org/abs/2210.01340">arXiv</a>
               <p></p>
               <!-- SUMMARY -->
               We present a safe method to learn a visuo-tactile insertion policy that is robust against grasp pose variations while minimizing human inputs and collision between the robot and the environment. We achieve this by dividing the insertion task into a tactile-base grasp pose estimation phase and a visuoservo insertion phase. Using force-torque sensing, we also develop a safe self-supervised data collection pipeline that limits collision between the part and the surrounding environment. The resulting policy can insert the USB connector with 45 insertion successes on 45 different initial grasp poses.
