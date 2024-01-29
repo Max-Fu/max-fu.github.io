@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
       <td style="padding:0px">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -49,37 +49,44 @@
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody> 
 
-          <!-- RPT -->
-          <tr onmouseout="rpt_stop()" onmouseover="rpt_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
+          <!-- CrossMAE -->
+          <tr>
+            <td style="padding:20px;width:40%;vertical-align:middle;height:200px">
               <!-- IMAGES -->
               <div class="one">
-                <div class="two" id='rpt_splash_2'>
-                  <video  width=115% height=100% muted autoplay loop>
-                    <source src="images/rpt_splash_2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-                <video  width=115% height=100% muted autoplay loop id="rpt_splash_1">
+                <img src="images/crossmae_website.jpeg" width='300'/>
+              </div>
+            </td>
+            <td style="padding:20px;width:60%;vertical-align:middle">
+              <!-- TITLE -->
+              <papertitle><a href="https://crossmae.github.io/">Rethinking Patch Dependence for Masked Autoencoders</a></papertitle>
+              <br>
+              <!-- AUTHORS -->
+              <b>Letian Fu</b>*, Long Lian*, Renhao Wang, Baifeng Shi, Xudong Wang, Adam Yala†, Trevor Darrell†, Alexei A Efros†, Ken Goldberg†
+              <br>
+              <small>*Equal contribution, †Equal advising</small>
+              <br>
+              <!-- CONFERENCE -->
+              <a href="https://arxiv.org/abs/2401.14391">ArXiv</a>, <a href="https://crossmae.github.io/">Website</a>, <a href="https://github.com/TonyLianLong/CrossMAE">Code</a>
+              <!-- <em>Arxiv</em>, <a href="https://arxiv.org/abs/2306.10007">arXiv</a> -->
+              <p></p>
+              <!-- SUMMARY -->
+              <!-- We introduce a self-supervised sensorimotor pre-training method for robotics using a Transformer model called RPT. It encodes sequences of images, robot states, and actions into tokens and trains to predict masked content, enabling the robot to model the physical world. RPT operates on latent visual data, scales to 10x larger models, and allows 10 Hz inference. Through evaluation on 20,000 real-world trajectories collected over 9 months, RPT consistently outperforms training from scratch, doubles improvements in block stacking, and shows beneficial scaling characteristics. -->
+            </td>
+          </tr>
+
+          <!-- RPT -->
+          <tr>
+            <td style="padding:20px;width:40%;vertical-align:middle;height:150px">
+              <!-- IMAGES -->
+              <div class="one">
+                <video  width='300' muted autoplay loop id="rpt_splash_1">
                   <source src="images/rpt_splash_1.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
-              <!-- SCRIPT FOR HOVERING -->
-              <script type="text/javascript">
-                function rpt_start() {
-                  document.getElementById('rpt_splash_1').style.opacity = "0";
-                  document.getElementById('rpt_splash_2').style.opacity = "1";
-                }
-
-                function rpt_stop() {
-                  document.getElementById('rpt_splash_1').style.opacity = "1";
-                  document.getElementById('rpt_splash_2').style.opacity = "0";
-                }
-                rpt_stop()
-              </script>
             </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
+            <td style="padding:20px;width:60%;vertical-align:middle">
               <!-- TITLE -->
               <papertitle><a href="https://robotic-pretrained-transformer.github.io/">Robot Learning with Sensorimotor Pre-training</a></papertitle>
               <br>
@@ -96,29 +103,13 @@
           </tr>
 
           <!-- TacInsertion -->
-          <tr onmouseout="tacinsert_stop()" onmouseover="tacinsert_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
+          <tr>
+            <td style="padding:50px;width:40%;vertical-align:middle;height:100px">
               <div class="one">
-                <div class="two" id='tactile_insertion_2'>
-                  <img src="images/tactile_insertion_2.jpg" width='180'/>
-                </div>
-                <img src="images/tactile_insertion.jpg" width='180' id='tactile_insertion_1'/>
+                <img src="images/tactile_insertion.jpg" width='225' id='tactile_insertion_1'/>
               </div>
-              <!-- SCRIPT FOR HOVERING -->
-              <script type="text/javascript">
-                function tacinsert_start() {
-                  document.getElementById('tactile_insertion_1').style.opacity = "0";
-                  document.getElementById('tactile_insertion_2').style.opacity = "1";
-                }
-
-                function tacinsert_stop() {
-                  document.getElementById('tactile_insertion_1').style.opacity = "1";
-                  document.getElementById('tactile_insertion_2').style.opacity = "0";
-                }
-                tacinsert_stop()
-              </script>
             </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
+            <td style="padding:20px;width:60%;vertical-align:middle">
               <!-- TITLE -->
               <papertitle>Safely Learning Visuo-Tactile Feedback Policies in Real For Industrial Insertion</papertitle>
               <br>
@@ -134,33 +125,17 @@
           </tr>
 
           <!-- EVO-NERF -->
-          <tr onmouseout="evonerf_stop()" onmouseover="evonerf_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
+          <tr>
+            <td style="padding:20px;width:40%;vertical-align:middle;height:200px">
               <!-- IMAGES -->
               <div class="one">
-                <div class="two" id='evonerf_under'>
-                  <img src="images/evonerf_early_stop.png" width='180'/>
-                </div>
-                <video  width=115% height=100% muted autoplay loop id="evonerf_splash">
+                <video  width='300' muted autoplay loop id="evonerf_splash">
                   <source src="images/evonerf_splash.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
-              <!-- SCRIPT FOR HOVERING -->
-              <script type="text/javascript">
-                function evonerf_start() {
-                  document.getElementById('evonerf_splash').style.opacity = "0";
-                  document.getElementById('evonerf_under').style.opacity = "1";
-                }
-
-                function evonerf_stop() {
-                  document.getElementById('evonerf_splash').style.opacity = "1";
-                  document.getElementById('evonerf_under').style.opacity = "0";
-                }
-                evonerf_stop()
-              </script>
             </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
+            <td style="padding:20px;width:60%;vertical-align:middle">
               <!-- TITLE -->
               <a href="https://sites.google.com/view/evo-nerf">
                 <papertitle>Evo-NeRF: Evolving NeRF for Sequential Robot Grasping</papertitle>
@@ -179,30 +154,14 @@
           </tr>
 
           <!-- staxray -->
-          <tr onmouseout="staxray_stop()" onmouseover="staxray_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
+          <tr>
+            <td style="padding:20px;width:40%;vertical-align:middle;height:200px">
               <!-- IMAGES -->
               <div class="one">
-                <div class="two" id='staxray_destack'>
-                  <img src="images/staxray_destack.png" width='180'/>
-                </div>
-                <img src="images/staxray_restack.png" width='180' id='staxray_restack'/>
+                <img src="images/staxray_restack.png" width='300' id='staxray_restack'/>
               </div>
-              <!-- SCRIPT FOR HOVERING -->
-              <script type="text/javascript">
-                function staxray_start() {
-                  document.getElementById('staxray_restack').style.opacity = "0";
-                  document.getElementById('staxray_destack').style.opacity = "1";
-                }
-
-                function staxray_stop() {
-                  document.getElementById('staxray_restack').style.opacity = "1";
-                  document.getElementById('staxray_destack').style.opacity = "0";
-                }
-                staxray_stop()
-              </script>
             </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
+            <td style="padding:20px;width:60%;vertical-align:middle">
               <!-- TITLE -->  
                 <a href="https://sites.google.com/berkeley.edu/stax-ray">
                 <papertitle>Mechanical Search on Shelves with Efficient
@@ -224,29 +183,13 @@
           </tr>
 
           <!-- LEGS -->
-          <tr onmouseout="legs_stop()" onmouseover="legs_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
+          <tr>
+            <td style="padding:20px;width:40%;vertical-align:middle;height:200px">
               <div class="one">
-                <div class="two" id='legs_2'>
-                  <img src="images/legs_splash_2.jpg" width='180'/>
-                </div>
-                <img src="images/legs_splash_1.jpg" width='180' id='legs_1'/>
+                <img src="images/legs_splash_1.jpg" width='300' id='legs_1'/>
               </div>
-              <!-- SCRIPT FOR HOVERING -->
-              <script type="text/javascript">
-                function legs_start() {
-                  document.getElementById('legs_1').style.opacity = "0";
-                  document.getElementById('legs_2').style.opacity = "1";
-                }
-
-                function legs_stop() {
-                  document.getElementById('legs_1').style.opacity = "1";
-                  document.getElementById('legs_2').style.opacity = "0";
-                }
-                legs_stop()
-              </script>
             </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
+            <td style="padding:20px;width:60%;vertical-align:middle">
               <!-- TITLE -->
               <a href="https://sites.google.com/view/legsexp-grasping">
                 <papertitle>LEGS: Learning Efficient Grasp Sets for Exploratory Grasping</papertitle>
@@ -264,29 +207,13 @@
           </tr>
 
           <!-- SLAXRAY -->
-          <tr onmouseout="slaxray_stop()" onmouseover="slaxray_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
+          <tr>
+            <td style="padding:20px;width:40%;vertical-align:middle;height:200px">
               <div class="one">
-                <div class="two" id='slaxray_2'>
-                  <img src="images/slaxray_splash_1.jpg" width='180'/>
-                </div>
-                <img src="images/slaxray_splash_2.jpg" width='180' id='slaxray_1'/>
+                <img src="images/slaxray_splash_1.jpg" width='300' id='slaxray_1'/>
               </div>
-              <!-- SCRIPT FOR HOVERING -->
-              <script type="text/javascript">
-                function slaxray_start() {
-                  document.getElementById('slaxray_1').style.opacity = "0";
-                  document.getElementById('slaxray_2').style.opacity = "1";
-                }
-
-                function slaxray_stop() {
-                  document.getElementById('slaxray_1').style.opacity = "1";
-                  document.getElementById('slaxray_2').style.opacity = "0";
-                }
-                slaxray_stop()
-              </script>
             </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
+            <td style="padding:20px;width:60%;vertical-align:middle">
               <!-- TITLE -->
               <papertitle>Mechanical Search on Shelves using a Novel “Bluction” Tool</papertitle>
               <br>
