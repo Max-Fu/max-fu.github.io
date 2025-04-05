@@ -1,75 +1,15 @@
-/* latin-ext */
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAUi-qNiXg7eU0.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 /* Base styles */
 body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  color: #333;
-  background-color: #fafafa;
+  color: #2d3748;
+  background-color: #f7fafc;
+  background-image: linear-gradient(to bottom right, #f7fafc, #edf2f7);
+  min-height: 100vh;
 }
 
 /* Responsive container */
@@ -77,8 +17,13 @@ body {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px 20px;
   box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 /* Typography */
@@ -88,52 +33,70 @@ th,
 tr,
 p,
 a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 16px;
   line-height: 1.6;
+  color: #2d3748;
 }
 
 strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 16px;
   font-weight: 600;
+  color: #1a202c;
 }
 
 heading {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 24px;
   font-weight: 700;
   margin: 2em 0 1em;
-  color: #2c3e50;
+  color: #1a202c;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+heading:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #4299e1;
+  border-radius: 2px;
 }
 
 papertitle {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 16px;
   font-weight: 700;
-  color: #2c3e50;
+  color: #1a202c;
 }
 
 name {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 36px;
   font-weight: 700;
-  color: #2c3e50;
+  color: #1a202c;
   margin-bottom: 0.5em;
   display: block;
+  letter-spacing: -0.5px;
 }
 
 /* Links */
 a {
-  color: #1772d0;
+  color: #3182ce;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid transparent;
 }
 
 a:focus,
 a:hover {
-  color: #f09228;
+  color: #2c5282;
   text-decoration: none;
+  border-bottom: 1px solid #2c5282;
 }
 
 /* Images and media */
@@ -145,16 +108,29 @@ a:hover {
   margin: 0 auto;
   overflow: hidden;
   border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .one img,
 .one video {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  max-width: 100%;
+  object-fit: contain;
   transition: transform 0.3s ease;
   display: block;
   border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* Fix for GitHub Pages image sizing */
+img[src^="images/"],
+video[src^="images/"] {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .one:hover img,
@@ -163,7 +139,8 @@ a:hover {
 }
 
 .one:hover {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
 }
 
 /* Tables */
@@ -172,11 +149,14 @@ table {
   border-collapse: separate;
   border-spacing: 0;
   margin: 1em 0;
+  table-layout: fixed;
 }
 
 td {
   padding: 15px;
   vertical-align: middle;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Responsive design */
@@ -266,7 +246,56 @@ td {
 
 /* Highlights */
 span.highlight {
-  background-color: #ffffd0;
+  background-color: #ebf8ff;
   padding: 0 2px;
   border-radius: 2px;
+}
+
+/* Custom styling for publication entries */
+tr {
+  transition: background-color 0.2s ease;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+tr:hover {
+  background-color: #f7fafc;
+}
+
+/* Style for the profile section */
+tr:first-child {
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Style for the footer */
+table:last-of-type {
+  margin-top: 3em;
+  padding-top: 1em;
+  border-top: 1px solid #e2e8f0;
+  font-size: 14px;
+  color: #718096;
+}
+
+/* Style for the contact links */
+p[style="text-align:center"] {
+  margin-top: 1.5em;
+  padding: 10px;
+  background-color: #f7fafc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Style for the equal contribution text */
+small {
+  color: #718096;
+  font-size: 0.85em;
+}
+
+/* Style for the conference/journal names */
+em {
+  color: #4a5568;
+  font-style: normal;
+  font-weight: 500;
 }
