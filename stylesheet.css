@@ -63,9 +63,71 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fafafa;
+}
+
+/* Responsive container */
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Typography */
+body,
+td,
+th,
+tr,
+p,
+a {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+strong {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+heading {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 2em 0 1em;
+  color: #2c3e50;
+}
+
+papertitle {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+name {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+/* Links */
 a {
   color: #1772d0;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 a:focus,
@@ -74,58 +136,137 @@ a:hover {
   text-decoration: none;
 }
 
-body,
-td,
-th,
-tr,
-p,
-a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px
-}
-
-strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-}
-
-heading {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
-}
-
-papertitle {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: 700
-}
-
-name {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 32px;
-}
-
+/* Images and media */
 .one {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
-.two {
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+.one img,
+.one video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: block;
+  border-radius: 8px;
 }
 
+.one:hover img,
+.one:hover video {
+  transform: scale(1.05);
+}
+
+.one:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1em 0;
+}
+
+td {
+  padding: 15px;
+  vertical-align: middle;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  body,
+  td,
+  th,
+  tr,
+  p,
+  a {
+    font-size: 14px;
+  }
+
+  name {
+    font-size: 28px;
+  }
+
+  heading {
+    font-size: 20px;
+  }
+
+  .one {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  td {
+    padding: 10px;
+    width: 100% !important;
+    display: block;
+  }
+
+  /* Stack table cells on mobile */
+  tr {
+    display: block;
+    margin-bottom: 2em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1em;
+  }
+
+  /* Ensure text doesn't overlap with images */
+  td:first-child {
+    margin-bottom: 15px;
+  }
+
+  /* Ensure links don't overflow */
+  p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Ensure paper titles don't overflow */
+  papertitle {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  /* Ensure proper spacing between elements */
+  br {
+    display: block;
+    content: "";
+    margin: 5px 0;
+  }
+}
+
+/* Add additional breakpoint for very small screens */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+  
+  td {
+    padding: 8px;
+  }
+  
+  .one {
+    max-width: 100%;
+  }
+}
+
+/* Animations */
 .fade {
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -webkit-transition: opacity 0.2s ease-in-out;
 }
 
+/* Highlights */
 span.highlight {
   background-color: #ffffd0;
+  padding: 0 2px;
+  border-radius: 2px;
 }

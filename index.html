@@ -1,325 +1,239 @@
 <!DOCTYPE HTML>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Letian (Max) Fu</title>
-  
   <meta name="author" content="Letian (Max) Fu">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="icon" type="image/png" href="images/seal_icon.png">
 </head>
 
 <body>
-  <table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:60%;vertical-align:middle">
-              <p style="text-align:center">
-                <name>Letian (Max) Fu</name>
-              </p>
-              <p>
-                I am a second year PhD student at UC Berkeley advised by Professor <a href="https://goldberg.berkeley.edu/">Ken Goldberg</a>. 
-                I am also a research intern at NVIDIA, working with <a href="https://jimfan.me/">Jim Fan</a> and <a href="https://yukezhu.me/">Yuke Zhu</a>. 
-                I am interested in building self-supervised multi-modal models for robot learning. 
-              </p>
-              <p>
-                I received B.A./M.S. in Computer Science and Applied Mathematics from UC Berkeley in 2023. 
-              </p>
-              <p style="text-align:center">
-                <a href="mailto:max.fu.letian@berkeley.edu">Email</a> &nbsp/&nbsp
-                <a href="https://scholar.google.com/citations?user=aWot7UgAAAAJ&hl">Google Scholar</a> &nbsp/&nbsp
-                <a href="https://www.linkedin.com/in/letian-max-fu-8b672b134/">LinkedIn</a> &nbsp/&nbsp
-                <a href="CV.pdf">Resume</a>
-                <!-- &nbsp/&nbsp -->
-              </p>
-            </td>
-            <td style="padding:2.5%;width:100%;max-width:100%">
-              <a href="images/profile.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/profile.jpg" class="hoverZoomLink"></a>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Publications</heading>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody> 
+  <div class="container">
+    <table>
+      <tr>
+        <td style="width:60%;vertical-align:middle">
+          <name>Letian (Max) Fu</name>
+          <p>
+            I am a second year PhD student at UC Berkeley advised by Professor <a href="https://goldberg.berkeley.edu/">Ken Goldberg</a>. 
+            I am also a research intern at NVIDIA, working with <a href="https://jimfan.me/">Jim Fan</a> and <a href="https://yukezhu.me/">Yuke Zhu</a>. 
+            I am interested in building self-supervised multi-modal models for robot learning. 
+          </p>
+          <p>
+            I received B.A./M.S. in Computer Science and Applied Mathematics from UC Berkeley in 2023. 
+          </p>
+          <p style="text-align:center">
+            <a href="mailto:max.fu.letian@berkeley.edu">Email</a> &nbsp/&nbsp
+            <a href="https://scholar.google.com/citations?user=aWot7UgAAAAJ&hl">Google Scholar</a> &nbsp/&nbsp
+            <a href="https://www.linkedin.com/in/letian-max-fu-8b672b134/">LinkedIn</a> &nbsp/&nbsp
+            <a href="CV.pdf">Resume</a>
+          </p>
+        </td>
+        <td style="width:40%;vertical-align:middle">
+          <div class="one">
+            <img alt="profile photo" src="images/profile.jpg">
+          </div>
+        </td>
+      </tr>
+    </table>
 
-          <!-- OTTER -->
-          <tr>
-            <td style="padding:20px;width:40%;vertical-align:middle;height:200px">
-              <!-- IMAGES -->
-              <div class="one" style="max-width: 100%; height: auto; overflow: hidden;">
-                <img src="images/otter_figure.png" style="width: 100%; height: auto; max-width: 500px;">
-              </div>
-            </td>
-            <td style="padding:20px;width:60%;vertical-align:middle">
-              <!-- TITLE -->
-              <papertitle><a href="https://ottervla.github.io/">🦦OTTER: A Vision-Language-Action Model with Text-Aware Visual Feature Extraction
-              </a></papertitle>
-              <br>
-              <!-- AUTHORS -->
-              Huang Huang*, Fangchen Liu*, <b>Letian Fu*</b>, Tingfan Wu, Mustafa Mukadam, Jitendra Malik, Ken Goldberg, Pieter Abbeel
-              <br>
-              <small>*Equal contribution</small>
-              <br>
-              <!-- CONFERENCE -->
-              <em>Arxiv</em> 2025, <a href="http://arxiv.org/abs/2503.03734">Paper</a>, <a href="https://ottervla.github.io/">Website</a>, <a href="https://github.com/Max-Fu/otter">Code</a>
-              <!-- <em>Arxiv</em>, <a href="https://arxiv.org/abs/2306.10007">arXiv</a> -->
-              <p></p>
-              <!-- SUMMARY -->
-              <!-- We introduce a self-supervised sensorimotor pre-training method for robotics using a Transformer model called RPT. It encodes sequences of images, robot states, and actions into tokens and trains to predict masked content, enabling the robot to model the physical world. RPT operates on latent visual data, scales to 10x larger models, and allows 10 Hz inference. Through evaluation on 20,000 real-world trajectories collected over 9 months, RPT consistently outperforms training from scratch, doubles improvements in block stacking, and shows beneficial scaling characteristics. -->
-            </td>
-          </tr>
+    <heading>Publications</heading>
 
-          <!-- ICRT -->
-          <tr>
-            <td style="padding:20px;width:40%;vertical-align:middle;height:200px">
-              <!-- IMAGES -->
-              <div class="one" style="max-width: 100%; height: auto; overflow: hidden;">
-                <img src="images/icrt_splash.png" style="width: 100%; height: auto; max-width: 500px;">
-              </div>
-            </td>
-            <td style="padding:20px;width:60%;vertical-align:middle">
-              <!-- TITLE -->
-              <papertitle><a href="https://icrt.dev/">In-Context Imitation Learning via Next-Token Prediction</a></papertitle>
-              <br>
-              <!-- AUTHORS -->
-              <b>Letian Fu*</b>, Huang Huang*, Gaurav Datta*, Lawrence Yunliang Chen, William Chung-Ho Panitch, Fangchen Liu, Hui Li, Ken Goldberg 
-              <br>
-              <small>*Equal contribution</small>
-              <br>
-              <!-- CONFERENCE -->
-              <em>ICRA</em> 2025, <a href="https://icrt.dev/files/icrt.pdf">Paper</a>, <a href="https://icrt.dev/">Website</a>, <a href="https://github.com/Max-Fu/icrt">Code</a>, <a href="https://huggingface.co/datasets/Ravenh97/ICRT-MT">Dataset</a>
-              <!-- <em>Arxiv</em>, <a href="https://arxiv.org/abs/2306.10007">arXiv</a> -->
-              <p></p>
-              <!-- SUMMARY -->
-              <!-- We introduce a self-supervised sensorimotor pre-training method for robotics using a Transformer model called RPT. It encodes sequences of images, robot states, and actions into tokens and trains to predict masked content, enabling the robot to model the physical world. RPT operates on latent visual data, scales to 10x larger models, and allows 10 Hz inference. Through evaluation on 20,000 real-world trajectories collected over 9 months, RPT consistently outperforms training from scratch, doubles improvements in block stacking, and shows beneficial scaling characteristics. -->
-            </td>
-          </tr>
+    <table>
+      <!-- OTTER -->
+      <tr>
+        <td style="width:40%;vertical-align:middle">
+          <div class="one">
+            <img src="images/otter_figure.png" alt="OTTER figure">
+          </div>
+        </td>
+        <td style="width:60%;vertical-align:middle">
+          <papertitle><a href="https://ottervla.github.io/">🦦OTTER: A Vision-Language-Action Model with Text-Aware Visual Feature Extraction</a></papertitle>
+          <br>
+          Huang Huang*, Fangchen Liu*, <b>Letian Fu*</b>, Tingfan Wu, Mustafa Mukadam, Jitendra Malik, Ken Goldberg, Pieter Abbeel
+          <br>
+          <small>*Equal contribution</small>
+          <br>
+          <em>Arxiv</em> 2025, <a href="http://arxiv.org/abs/2503.03734">Paper</a>, <a href="https://ottervla.github.io/">Website</a>, <a href="https://github.com/Max-Fu/otter">Code</a>
+        </td>
+      </tr>
 
-          <!-- TVL -->
-          <tr>
-            <td style="padding:20px;width:40%;vertical-align:middle;height:200px">
-              <!-- IMAGES -->
-              <div class="one" style="max-width: 100%; height: auto; overflow: hidden;">
-                <img src="images/tvl_splash.jpg" style="width: 100%; height: auto; max-width: 500px;">
-              </div>
-            </td>
-            <td style="padding:20px;width:60%;vertical-align:middle">
-              <!-- TITLE -->
-              <papertitle><a href="https://tactile-vlm.github.io">A Touch, Vision, and Language Dataset for Multimodal Alignment</a></papertitle>
-              <br>
-              <!-- AUTHORS -->
-              <b>Letian Fu</b>, Gaurav Datta*, Huang Huang*, William Chung-Ho Panitch*, Jaimyn Drake*, Joseph Ortiz, Mustafa Mukadam, Mike Lambeta, Roberto Calandra, Ken Goldberg 
-              <br>
-              <small>*Equal contribution</small>
-              <br>
-              <!-- CONFERENCE -->
-              <em>ICML</em> 2024, <b>Oral Presentation</b>, <a href="https://openreview.net/forum?id=tFEOOH9eH0">OpenReview</a>, <a href="https://tactile-vlm.github.io/">Website</a>, <a href="https://github.com/Max-Fu/tvl">Code</a>, <a href="https://huggingface.co/datasets/mlfu7/Touch-Vision-Language-Dataset">Dataset</a>
-              <!-- <em>Arxiv</em>, <a href="https://arxiv.org/abs/2306.10007">arXiv</a> -->
-              <p></p>
-              <!-- SUMMARY -->
-              <!-- We introduce a self-supervised sensorimotor pre-training method for robotics using a Transformer model called RPT. It encodes sequences of images, robot states, and actions into tokens and trains to predict masked content, enabling the robot to model the physical world. RPT operates on latent visual data, scales to 10x larger models, and allows 10 Hz inference. Through evaluation on 20,000 real-world trajectories collected over 9 months, RPT consistently outperforms training from scratch, doubles improvements in block stacking, and shows beneficial scaling characteristics. -->
-            </td>
-          </tr>
+      <!-- ICRT -->
+      <tr>
+        <td style="width:40%;vertical-align:middle">
+          <div class="one">
+            <img src="images/icrt_splash.png" alt="ICRT figure">
+          </div>
+        </td>
+        <td style="width:60%;vertical-align:middle">
+          <papertitle><a href="https://icrt.dev/">In-Context Imitation Learning via Next-Token Prediction</a></papertitle>
+          <br>
+          <b>Letian Fu*</b>, Huang Huang*, Gaurav Datta*, Lawrence Yunliang Chen, William Chung-Ho Panitch, Fangchen Liu, Hui Li, Ken Goldberg 
+          <br>
+          <small>*Equal contribution</small>
+          <br>
+          <em>ICRA</em> 2025, <a href="https://icrt.dev/files/icrt.pdf">Paper</a>, <a href="https://icrt.dev/">Website</a>, <a href="https://github.com/Max-Fu/icrt">Code</a>, <a href="https://huggingface.co/datasets/Ravenh97/ICRT-MT">Dataset</a>
+        </td>
+      </tr>
 
-          <!-- CrossMAE -->
-          <tr>
-            <td style="padding:20px;width:40%;vertical-align:middle;height:200px">
-              <!-- IMAGES -->
-              <div class="one" style="max-width: 100%; height: auto; overflow: hidden;">
-                <img src="images/crossmae_website.jpeg" style="width: 100%; height: auto; max-width: 500px;">
-              </div>
-            </td>
-            <td style="padding:20px;width:60%;vertical-align:middle">
-              <!-- TITLE -->
-              <papertitle><a href="https://crossmae.github.io/">Rethinking Patch Dependence for Masked Autoencoders</a></papertitle>
-              <br>
-              <!-- AUTHORS -->
-              <b>Letian Fu</b>*, Long Lian*, Renhao Wang, Baifeng Shi, Xudong Wang, Adam Yala†, Trevor Darrell†, Alexei A Efros†, Ken Goldberg†
-              <br>
-              <small>*Equal contribution, †Equal advising</small>
-              <br>
-              <!-- CONFERENCE -->
-              <em>TMLR</em> 2025, <a href="https://arxiv.org/abs/2401.14391">Paper</a>, <a href="https://crossmae.github.io/">Website</a>, <a href="https://github.com/TonyLianLong/CrossMAE">Code</a>
-              <!-- <em>Arxiv</em>, <a href="https://arxiv.org/abs/2306.10007">arXiv</a> -->
-              <p></p>
-              <!-- SUMMARY -->
-              <!-- We introduce a self-supervised sensorimotor pre-training method for robotics using a Transformer model called RPT. It encodes sequences of images, robot states, and actions into tokens and trains to predict masked content, enabling the robot to model the physical world. RPT operates on latent visual data, scales to 10x larger models, and allows 10 Hz inference. Through evaluation on 20,000 real-world trajectories collected over 9 months, RPT consistently outperforms training from scratch, doubles improvements in block stacking, and shows beneficial scaling characteristics. -->
-            </td>
-          </tr>
+      <!-- TVL -->
+      <tr>
+        <td style="width:40%;vertical-align:middle">
+          <div class="one">
+            <img src="images/tvl_splash.jpg" alt="TVL figure">
+          </div>
+        </td>
+        <td style="width:60%;vertical-align:middle">
+          <papertitle><a href="https://tactile-vlm.github.io">A Touch, Vision, and Language Dataset for Multimodal Alignment</a></papertitle>
+          <br>
+          <b>Letian Fu</b>, Gaurav Datta*, Huang Huang*, William Chung-Ho Panitch*, Jaimyn Drake*, Joseph Ortiz, Mustafa Mukadam, Mike Lambeta, Roberto Calandra, Ken Goldberg 
+          <br>
+          <small>*Equal contribution</small>
+          <br>
+          <em>ICML</em> 2024, <b>Oral Presentation</b>, <a href="https://openreview.net/forum?id=tFEOOH9eH0">OpenReview</a>, <a href="https://tactile-vlm.github.io/">Website</a>, <a href="https://github.com/Max-Fu/tvl">Code</a>, <a href="https://huggingface.co/datasets/mlfu7/Touch-Vision-Language-Dataset">Dataset</a>
+        </td>
+      </tr>
 
-          <!-- RPT -->
-          <tr>
-            <td style="padding:20px;width:40%;vertical-align:middle;height:150px">
-              <!-- IMAGES -->
-              <div class="one"  style="max-width: 100%; height: auto; overflow: hidden;">
-                <video  width='300' muted autoplay loop id="rpt_splash_1">
-                  <source src="images/rpt_splash_1.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            </td>
-            <td style="padding:20px;width:60%;vertical-align:middle">
-              <!-- TITLE -->
-              <papertitle><a href="https://robotic-pretrained-transformer.github.io/">Robot Learning with Sensorimotor Pre-training</a></papertitle>
-              <br>
-              <!-- AUTHORS -->
-              Ilija Radosavovic, Baifeng Shi, <b>Letian Fu</b>, Ken Goldberg, Trevor Darrell, Jitendra Malik
-              <br>
-              <!-- CONFERENCE -->
-              <em>CoRL</em> 2023, <b>Oral Presentation</b>, <a href="https://openreview.net/forum?id=3gh9hf3R6x">OpenReview</a>
-              <!-- <em>Arxiv</em>, <a href="https://arxiv.org/abs/2306.10007">arXiv</a> -->
-              <p></p>
-              <!-- SUMMARY -->
-              <!-- We introduce a self-supervised sensorimotor pre-training method for robotics using a Transformer model called RPT. It encodes sequences of images, robot states, and actions into tokens and trains to predict masked content, enabling the robot to model the physical world. RPT operates on latent visual data, scales to 10x larger models, and allows 10 Hz inference. Through evaluation on 20,000 real-world trajectories collected over 9 months, RPT consistently outperforms training from scratch, doubles improvements in block stacking, and shows beneficial scaling characteristics. -->
-            </td>
-          </tr>
+      <!-- CrossMAE -->
+      <tr>
+        <td style="width:40%;vertical-align:middle">
+          <div class="one">
+            <img src="images/crossmae_website.jpeg" alt="CrossMAE figure">
+          </div>
+        </td>
+        <td style="width:60%;vertical-align:middle">
+          <papertitle><a href="https://crossmae.github.io/">Rethinking Patch Dependence for Masked Autoencoders</a></papertitle>
+          <br>
+          <b>Letian Fu</b>*, Long Lian*, Renhao Wang, Baifeng Shi, Xudong Wang, Adam Yala†, Trevor Darrell†, Alexei A Efros†, Ken Goldberg†
+          <br>
+          <small>*Equal contribution, †Equal advising</small>
+          <br>
+          <em>TMLR</em> 2025, <a href="https://arxiv.org/abs/2401.14391">Paper</a>, <a href="https://crossmae.github.io/">Website</a>, <a href="https://github.com/TonyLianLong/CrossMAE">Code</a>
+        </td>
+      </tr>
 
-          <!-- TacInsertion -->
-          <tr>
-            <td style="padding:50px;width:40%;vertical-align:middle;height:100px">
-              <div class="one" style="max-width: 100%; height: auto; overflow: hidden;">
-                <img src="images/tactile_insertion.jpg" style="width: 100%; height: auto; max-width: 225px;" id='tactile_insertion_1'/>
-              </div>
-            </td>
-            <td style="padding:20px;width:60%;vertical-align:middle">
-              <!-- TITLE -->
-              <papertitle>Safely Learning Visuo-Tactile Feedback Policies in Real For Industrial Insertion</papertitle>
-              <br>
-              <!-- AUTHORS -->
-              <b>Letian Fu</b>, Huang Huang, Lars Berscheid, Hui Li, Ken Goldberg, Sachin Chitta,
-              <br>
-              <!-- CONFERENCE -->
-              <em>ICRA</em> 2023, <a href="https://arxiv.org/abs/2210.01340">arXiv</a>
-              <p></p>
-              <!-- SUMMARY -->
-              <!-- We present a safe method to learn a visuo-tactile insertion policy that is robust against grasp pose variations while minimizing human inputs and collision between the robot and the environment. We achieve this by dividing the insertion task into a tactile-base grasp pose estimation phase and a visuoservo insertion phase. Using force-torque sensing, we also develop a safe self-supervised data collection pipeline that limits collision between the part and the surrounding environment. The resulting policy can insert the USB connector with 45 insertion successes on 45 different initial grasp poses. -->
-            </td>
-          </tr>
+      <!-- RPT -->
+      <tr>
+        <td style="width:40%;vertical-align:middle">
+          <div class="one">
+            <video width='300' muted autoplay loop id="rpt_splash_1">
+              <source src="images/rpt_splash_1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </td>
+        <td style="width:60%;vertical-align:middle">
+          <papertitle><a href="https://robotic-pretrained-transformer.github.io/">Robot Learning with Sensorimotor Pre-training</a></papertitle>
+          <br>
+          Ilija Radosavovic, Baifeng Shi, <b>Letian Fu</b>, Ken Goldberg, Trevor Darrell, Jitendra Malik
+          <br>
+          <em>CoRL</em> 2023, <b>Oral Presentation</b>, <a href="https://openreview.net/forum?id=3gh9hf3R6x">OpenReview</a>
+        </td>
+      </tr>
 
-          <!-- EVO-NERF -->
-          <tr>
-            <td style="padding:20px;width:40%;vertical-align:middle;height:200px">
-              <!-- IMAGES -->
-              <div class="one" style="max-width: 100%; height: auto; overflow: hidden;">
-                <video  width='300' muted autoplay loop id="evonerf_splash">
-                  <source src="images/evonerf_splash.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            </td>
-            <td style="padding:20px;width:60%;vertical-align:middle">
-              <!-- TITLE -->
-              <a href="https://sites.google.com/view/evo-nerf">
-                <papertitle>Evo-NeRF: Evolving NeRF for Sequential Robot Grasping</papertitle>
-              </a>
-              <br>
-              <!-- AUTHORS -->
-              Justin Kerr, <b>Letian Fu</b>, Huang Huang, Yahav Avigal, Matthew Tancik, Jeffrey Ichnowski, Angjoo Kanazawa, Ken Goldberg
-              <br>
-              <!-- CONFERENCE -->
-              <em>CoRL</em> 2022, <b>Oral Presentation</b>, <a href="https://openreview.net/forum?id=Bxr45keYrf">OpenReview</a>
-              <p></p>
-              <!-- SUMMARY -->
-              <!-- We propose Evo-NeRF with additional geometry regularizations improving performance in rapid capture settings to achieve real-time, updateable scene reconstruction for rapidly grasping table-top transparent objects. -->
-              <!-- We train a NeRF-adapted grasping network learns to ignore floaters. -->
-            </td>
-          </tr>
+      <!-- TacInsertion -->
+      <tr>
+        <td style="width:40%;vertical-align:middle">
+          <div class="one">
+            <img src="images/tactile_insertion.jpg" alt="Tactile Insertion figure" id='tactile_insertion_1'>
+          </div>
+        </td>
+        <td style="width:60%;vertical-align:middle">
+          <papertitle>Safely Learning Visuo-Tactile Feedback Policies in Real For Industrial Insertion</papertitle>
+          <br>
+          <b>Letian Fu</b>, Huang Huang, Lars Berscheid, Hui Li, Ken Goldberg, Sachin Chitta,
+          <br>
+          <em>ICRA</em> 2023, <a href="https://arxiv.org/abs/2210.01340">arXiv</a>
+        </td>
+      </tr>
 
-          <!-- staxray -->
-          <tr>
-            <td style="padding:20px;width:40%;vertical-align:middle;height:200px">
-              <!-- IMAGES -->
-              <div class="one" style="max-width: 100%; height: auto; overflow: hidden;">
-                <img src="images/staxray_restack.png" style="width: 100%; height: auto; max-width: 500px;">
-              </div>
-            </td>
-            <td style="padding:20px;width:60%;vertical-align:middle">
-              <!-- TITLE -->  
-                <a href="https://sites.google.com/berkeley.edu/stax-ray">
-                <papertitle>Mechanical Search on Shelves with Efficient
-                  Stacking and Destacking of Objects</papertitle>
-                </a>
-              <br>
-              <!-- AUTHORS -->
-              <b>Letian Fu</b>*, Huang Huang*, Michael Danielczuk, Chung Min Kim,
-                Zachary Tam, Jeffrey Ichnowski, Anelia Angelova, Brian Ichter, and
-                Ken Goldberg, <small>*Equal contribution</small>
-              <br>
-              <!-- CONFERENCE -->
-              <em>ISRR</em> 2022, <a href="https://arxiv.org/pdf/2207.02347.pdf">arXiv</a>
-              <p></p>
-              <!-- SUMMARY -->
-              <!-- We develop two policies for lateral access mechanical search with stacked objects. Both policies utilize stacking and destacking actions and can reveal the -->
-              <!-- target object with 82–100% success in simulation outperforming the baseline by up to 66%, and can achieve 67–100% success in physical experiments. -->
-            </td>
-          </tr>
+      <!-- EVO-NERF -->
+      <tr>
+        <td style="width:40%;vertical-align:middle">
+          <div class="one">
+            <video width='300' muted autoplay loop id="evonerf_splash">
+              <source src="images/evonerf_splash.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </td>
+        <td style="width:60%;vertical-align:middle">
+          <a href="https://sites.google.com/view/evo-nerf">
+            <papertitle>Evo-NeRF: Evolving NeRF for Sequential Robot Grasping</papertitle>
+          </a>
+          <br>
+          Justin Kerr, <b>Letian Fu</b>, Huang Huang, Yahav Avigal, Matthew Tancik, Jeffrey Ichnowski, Angjoo Kanazawa, Ken Goldberg
+          <br>
+          <em>CoRL</em> 2022, <b>Oral Presentation</b>, <a href="https://openreview.net/forum?id=Bxr45keYrf">OpenReview</a>
+        </td>
+      </tr>
 
-          <!-- LEGS -->
-          <tr>
-            <td style="padding:20px;width:40%;vertical-align:middle;height:200px">
-              <div class="one" style="max-width: 100%; height: auto; overflow: hidden;">
-                <img src="images/legs_splash_1.jpg" style="width: 100%; height: auto; max-width: 500px;">
-              </div>
-            </td>
-            <td style="padding:20px;width:60%;vertical-align:middle">
-              <!-- TITLE -->
-              <a href="https://sites.google.com/view/legsexp-grasping">
-                <papertitle>LEGS: Learning Efficient Grasp Sets for Exploratory Grasping</papertitle>
-              </a>
-              <br>
-              <!-- AUTHORS -->
-              <b>Letian Fu</b>, Michael Danielczuk, Ashwin Balakrishna, Daniel S. Brown, Jeffrey Ichnowski, Eugen Solowjow, Ken Goldberg,
-              <br>
-              <!-- CONFERENCE -->
-              <em>ICRA</em> 2022, <a href="https://ieeexplore.ieee.org/abstract/document/9812138">IEEE</a>, <a href="https://arxiv.org/abs/2111.15002">arxiv</a>
-              <p></p>
-              <!-- SUMMARY -->
-              <!-- We present Learned Efficient Grasp Sets, an algorithm which efficiently explores large sets of grasps by adaptively constructing a small active set of promising grasps. Experiments suggest that LEGS identiﬁes high-performing grasps more efficiently than baseline algorithms across 53 objects in simulation experiments and on three challenging objects in physical trials. We also propose a novel early stopping condition by computing a high-conﬁdence lower bound on the expected grasp performance. Simulation results suggest that this high-conﬁdence lower bound is highly accurate and tight. -->
-            </td>
-          </tr>
+      <!-- staxray -->
+      <tr>
+        <td style="width:40%;vertical-align:middle">
+          <div class="one">
+            <img src="images/staxray_restack.png" alt="staxray figure">
+          </div>
+        </td>
+        <td style="width:60%;vertical-align:middle">
+          <a href="https://sites.google.com/berkeley.edu/stax-ray">
+            <papertitle>Mechanical Search on Shelves with Efficient
+              Stacking and Destacking of Objects</papertitle>
+          </a>
+          <br>
+          <b>Letian Fu</b>*, Huang Huang*, Michael Danielczuk, Chung Min Kim,
+            Zachary Tam, Jeffrey Ichnowski, Anelia Angelova, Brian Ichter, and
+            Ken Goldberg, <small>*Equal contribution</small>
+          <br>
+          <em>ISRR</em> 2022, <a href="https://arxiv.org/pdf/2207.02347.pdf">arXiv</a>
+        </td>
+      </tr>
 
-          <!-- SLAXRAY -->
-          <tr>
-            <td style="padding:20px;width:40%;vertical-align:middle;height:200px">
-              <div class="one" style="max-width: 100%; height: auto; overflow: hidden;">
-                <img src="images/slaxray_splash_1.jpg" style="width: 100%; height: auto; max-width: 500px;">
-              </div>
-            </td>
-            <td style="padding:20px;width:60%;vertical-align:middle">
-              <!-- TITLE -->
-              <papertitle>Mechanical Search on Shelves using a Novel “Bluction” Tool</papertitle>
-              <br>
-              <!-- AUTHORS -->
-              Huang Huang, Michael Danielczuk, Chung Min Kim, <b>Letian Fu</b>, Zachary Tam, Jeffrey Ichnowski, Anelia Angelova, Brain Ichter, Ken Goldberg,
-              <br>
-              <!-- CONFERENCE -->
-              <em>ICRA</em> 2022, <a href="https://ieeexplore.ieee.org/document/9811622">IEEE</a>, <a href="https://arxiv.org/abs/2201.08968">arXiv</a>
-              <p></p>
-              <!-- SUMMARY -->
-              <!-- We present SLAX-RAY, a lateral access mechanical search pipeline. SLAX-RAY uses the bluction tool, a novel perception algorithm and a new search policy BluctionDAR that uses both pushing and suction actions to reveal a target object in a shelf environment. Experiments in simulated and physical settings demonstrate that the increased action set improves success rate by 26% and 67%, respectively, over pushing-only baselines.  -->
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:0px">
-              <p>
-                Source code taken from <a href="https://jonbarron.info/">Jon Barron's site.</a>
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
-      </td>
-    </tr>
-  </table>
+      <!-- LEGS -->
+      <tr>
+        <td style="width:40%;vertical-align:middle">
+          <div class="one">
+            <img src="images/legs_splash_1.jpg" alt="LEGS figure">
+          </div>
+        </td>
+        <td style="width:60%;vertical-align:middle">
+          <a href="https://sites.google.com/view/legsexp-grasping">
+            <papertitle>LEGS: Learning Efficient Grasp Sets for Exploratory Grasping</papertitle>
+          </a>
+          <br>
+          <b>Letian Fu</b>, Michael Danielczuk, Ashwin Balakrishna, Daniel S. Brown, Jeffrey Ichnowski, Eugen Solowjow, Ken Goldberg,
+          <br>
+          <em>ICRA</em> 2022, <a href="https://ieeexplore.ieee.org/abstract/document/9812138">IEEE</a>, <a href="https://arxiv.org/abs/2111.15002">arxiv</a>
+        </td>
+      </tr>
+
+      <!-- SLAXRAY -->
+      <tr>
+        <td style="width:40%;vertical-align:middle">
+          <div class="one">
+            <img src="images/slaxray_splash_1.jpg" alt="SLAXRAY figure">
+          </div>
+        </td>
+        <td style="width:60%;vertical-align:middle">
+          <papertitle>Mechanical Search on Shelves using a Novel "Bluction" Tool</papertitle>
+          <br>
+          Huang Huang, Michael Danielczuk, Chung Min Kim, <b>Letian Fu</b>, Zachary Tam, Jeffrey Ichnowski, Anelia Angelova, Brain Ichter, Ken Goldberg,
+          <br>
+          <em>ICRA</em> 2022, <a href="https://ieeexplore.ieee.org/document/9811622">IEEE</a>, <a href="https://arxiv.org/abs/2201.08968">arXiv</a>
+        </td>
+      </tr>
+    </table>
+    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr>
+        <td style="padding:0px">
+          <p>
+            Source code taken from <a href="https://jonbarron.info/">Jon Barron's site.</a>
+          </p>
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
 </body>
 
 </html>
