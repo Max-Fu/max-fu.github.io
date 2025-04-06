@@ -1,46 +1,55 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 /* CSS Variables for theming */
 :root {
-  --bg-color: #f7fafc;
-  --text-color: #2d3748;
-  --heading-color: #1a202c;
-  --link-color: #3182ce;
-  --link-hover-color: #2c5282;
-  --container-bg: rgba(255, 255, 255, 0.95);
+  --bg-color: #f8f5f2;
+  --text-color: #2d2a27;
+  --heading-color: #1a1816;
+  --link-color: #8b6d4c;
+  --link-hover-color: #6d563c;
+  --container-bg: rgba(255, 252, 248, 0.95);
   --container-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  --border-color: #e2e8f0;
+  --border-color: #e6e0d8;
   --image-bg: #ffffff;
-  --badge-bg: #ebf8ff;
-  --badge-color: #2b6cb0;
+  --badge-bg: #fdf6ed;
+  --badge-color: #8b6d4c;
+  --text-secondary: #5d5a55;
+  --hover-bg: #f5f0e8;
+  --hover-bg-dark: #e6e0d8;
   --transition-speed: 0.3s;
+  --heading-font: 'Playfair Display', serif;
+  --body-font: 'Nunito', sans-serif;
 }
 
 /* Dark mode variables */
 [data-theme="dark"] {
-  --bg-color: #1a202c;
-  --text-color: #e2e8f0;
-  --heading-color: #f7fafc;
-  --link-color: #63b3ed;
-  --link-hover-color: #90cdf4;
-  --container-bg: rgba(26, 32, 44, 0.95);
+  --bg-color: #1a1816;
+  --text-color: #e6e0d8;
+  --heading-color: #f8f5f2;
+  --link-color: #c4a77d;
+  --link-hover-color: #d4b78d;
+  --container-bg: rgba(26, 24, 22, 0.95);
   --container-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  --border-color: #4a5568;
-  --image-bg: #2d3748;
-  --badge-bg: #2c5282;
-  --badge-color: #ebf8ff;
+  --border-color: #3d3a35;
+  --image-bg: #2d2a27;
+  --badge-bg: #3d3a35;
+  --badge-color: #c4a77d;
+  --text-secondary: #b8b5b0;
+  --hover-bg: #2d2a27;
+  --hover-bg-dark: #3d3a35;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--body-font);
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--text-color);
   background-color: var(--bg-color);
   transition: background-color var(--transition-speed), color var(--transition-speed);
   margin: 0;
   padding: 0;
+  letter-spacing: 0.03em;
 }
 
 /* Theme toggle button */
@@ -98,6 +107,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Name styling */
 name {
+  font-family: var(--heading-font);
   font-size: 36px;
   font-weight: 700;
   color: var(--heading-color);
@@ -152,6 +162,7 @@ name::after {
 
 /* Heading styles */
 heading {
+  font-family: var(--heading-font);
   font-size: 28px;
   font-weight: 600;
   color: var(--heading-color);
@@ -167,10 +178,11 @@ heading::before {
 
 /* Paper title styles */
 papertitle {
-  font-size: 1.1em;
+  font-family: var(--heading-font);
+  font-size: 18px;
   font-weight: 600;
   color: var(--text-color);
-  letter-spacing: -0.01em;
+  letter-spacing: 0.02em;
 }
 
 /* Links */
@@ -270,19 +282,20 @@ td:first-child {
 /* Publication badge */
 .publication-badge {
   display: inline-block;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 12px;
+  padding: 0 0px;
+  font-size: 14px;
   font-weight: 500;
-  margin-left: 8px;
-  background-color: var(--badge-bg);
-  color: var(--badge-color);
-  transition: background-color var(--transition-speed), color var(--transition-speed);
+  margin-left: 0px;
+  font-family: var(--body-font);
+  letter-spacing: 0.02em;
+  font-style: italic;
+  color: var(--text-secondary);
+  transition: color var(--transition-speed);
 }
 
 .publication-badge.oral {
-  background: var(--hover-bg);
-  color: var(--text-color);
+  font-weight: 600;
+  color: var(--link-color);
 }
 
 /* Responsive design */
