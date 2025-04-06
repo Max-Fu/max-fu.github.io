@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -12,15 +12,20 @@
 </head>
 
 <body>
+  <!-- Theme toggle button -->
+  <div class="theme-toggle" id="theme-toggle">
+    <i class="fas fa-moon"></i>
+  </div>
+
   <div class="container">
     <table>
       <tr>
         <td style="width:60%;vertical-align:middle">
           <name>Letian (Max) Fu</name>
           <p>
-            I am a second year PhD student at UC Berkeley advised by Professor <a href="https://goldberg.berkeley.edu/">Ken Goldberg</a>. 
+            I am a PhD student at UC Berkeley advised by Professor <a href="https://goldberg.berkeley.edu/">Ken Goldberg</a>. 
             I am also a research intern at NVIDIA, working with <a href="https://jimfan.me/">Jim Fan</a> and <a href="https://yukezhu.me/">Yuke Zhu</a>. 
-            I am interested in building self-supervised multi-modal models for robot learning. 
+            I work on multi-modal models for both perception and robot learning. I am interested in scaling robot foundation models by investigating various approaches to expand robot datasets and leveraging priors from existing foundation models.
           </p>
           <p>
             I received B.A./M.S. in Computer Science and Applied Mathematics from UC Berkeley in 2023. 
@@ -28,7 +33,7 @@
           <p style="text-align:center">
             <a href="mailto:max.fu.letian@berkeley.edu"><i class="fas fa-envelope"></i> Email</a> &nbsp/&nbsp
             <a href="https://scholar.google.com/citations?user=aWot7UgAAAAJ&hl"><i class="fas fa-graduation-cap"></i> Google Scholar</a> &nbsp/&nbsp
-            <a href="https://www.linkedin.com/in/letian-max-fu-8b672b134/"><i class="fab fa-linkedin"></i> LinkedIn</a> &nbsp/&nbsp
+            <a href="https://x.com/letian_fu"><i class="fab fa-twitter"></i> Twitter</a> &nbsp/&nbsp
             <a href="CV.pdf"><i class="fas fa-file-alt"></i> Resume</a>
           </p>
         </td>
@@ -47,7 +52,7 @@
       <tr>
         <td style="width:40%;vertical-align:middle">
           <div class="one">
-            <img src="images/otter_figure.png" alt="OTTER figure">
+            <img src="images/otter_figure-white.png" alt="OTTER figure">
           </div>
         </td>
         <td style="width:60%;vertical-align:middle">
@@ -65,7 +70,7 @@
       <tr>
         <td style="width:40%;vertical-align:middle">
           <div class="one">
-            <img src="images/icrt_splash.png" alt="ICRT figure">
+            <img src="images/icrt_splash.png" alt="ICRT figure" class="png-image">
           </div>
         </td>
         <td style="width:60%;vertical-align:middle">
@@ -93,7 +98,7 @@
           <br>
           <small>*Equal contribution</small>
           <br>
-          <em>ICML</em> 2024, <b>Oral Presentation</b>, <a href="https://openreview.net/forum?id=tFEOOH9eH0"><i class="fas fa-file-alt"></i> OpenReview</a>, <a href="https://tactile-vlm.github.io/"><i class="fas fa-globe"></i> Website</a>, <a href="https://github.com/Max-Fu/tvl"><i class="fab fa-github"></i> Code</a>, <a href="https://huggingface.co/datasets/mlfu7/Touch-Vision-Language-Dataset"><i class="fas fa-database"></i> Dataset</a>
+          <em>ICML</em> 2024, <span class="publication-badge oral">Oral Presentation</span>, <a href="https://openreview.net/forum?id=tFEOOH9eH0"><i class="fas fa-file-alt"></i> OpenReview</a>, <a href="https://tactile-vlm.github.io/"><i class="fas fa-globe"></i> Website</a>, <a href="https://github.com/Max-Fu/tvl"><i class="fab fa-github"></i> Code</a>, <a href="https://huggingface.co/datasets/mlfu7/Touch-Vision-Language-Dataset"><i class="fas fa-database"></i> Dataset</a>
         </td>
       </tr>
 
@@ -130,7 +135,7 @@
           <br>
           Ilija Radosavovic, Baifeng Shi, <b>Letian Fu</b>, Ken Goldberg, Trevor Darrell, Jitendra Malik
           <br>
-          <em>CoRL</em> 2023, <b>Oral Presentation</b>, <a href="https://openreview.net/forum?id=3gh9hf3R6x"><i class="fas fa-file-alt"></i> OpenReview</a>
+          <em>CoRL</em> 2023, <span class="publication-badge oral">Oral Presentation</span>, <a href="https://openreview.net/forum?id=3gh9hf3R6x"><i class="fas fa-file-alt"></i> OpenReview</a>
         </td>
       </tr>
 
@@ -167,7 +172,7 @@
           <br>
           Justin Kerr, <b>Letian Fu</b>, Huang Huang, Yahav Avigal, Matthew Tancik, Jeffrey Ichnowski, Angjoo Kanazawa, Ken Goldberg
           <br>
-          <em>CoRL</em> 2022, <b>Oral Presentation</b>, <a href="https://openreview.net/forum?id=Bxr45keYrf"><i class="fas fa-file-alt"></i> OpenReview</a>
+          <em>CoRL</em> 2022, <span class="publication-badge oral">Oral Presentation</span>, <a href="https://openreview.net/forum?id=Bxr45keYrf"><i class="fas fa-file-alt"></i> OpenReview</a>
         </td>
       </tr>
 
@@ -236,6 +241,46 @@
       </tr>
     </tbody></table>
   </div>
+
+  <!-- Theme toggle script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const themeToggle = document.getElementById('theme-toggle');
+      const htmlElement = document.documentElement;
+      const icon = themeToggle.querySelector('i');
+      
+      // Check for saved theme preference or use system preference
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        htmlElement.setAttribute('data-theme', savedTheme);
+        updateIcon(savedTheme);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        htmlElement.setAttribute('data-theme', 'dark');
+        updateIcon('dark');
+      }
+      
+      // Toggle theme on button click
+      themeToggle.addEventListener('click', function() {
+        const currentTheme = htmlElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        htmlElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateIcon(newTheme);
+      });
+      
+      // Update icon based on theme
+      function updateIcon(theme) {
+        if (theme === 'dark') {
+          icon.classList.remove('fa-moon');
+          icon.classList.add('fa-sun');
+        } else {
+          icon.classList.remove('fa-sun');
+          icon.classList.add('fa-moon');
+        }
+      }
+    });
+  </script>
 </body>
 
 </html>
