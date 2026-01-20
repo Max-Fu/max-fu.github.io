@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Voting Session - Author Ordering</title>
+  <link rel="stylesheet" href="../stylesheet.css">
+  <link rel="stylesheet" href="voting.css">
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+</head>
+<body>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <div class="container voting-container">
+    <h1 class="voting-title">Create Voting Session</h1>
+    <p class="voting-subtitle">Set up anonymous author ordering for your paper</p>
+
+    <div id="createForm" class="voting-form">
+      <div class="form-group">
+        <label for="sessionTitle">Session Title</label>
+        <input type="text" id="sessionTitle" placeholder="e.g., Paper XYZ Author Order" required>
+      </div>
+
+      <div class="form-group">
+        <label>Authors (one per line)</label>
+        <textarea id="authorList" rows="6" placeholder="Alice Smith&#10;Bob Jones&#10;Carol Williams&#10;David Brown"></textarea>
+        <small class="form-help">Enter at least 2 authors. You'll receive n-1 voting links to distribute.</small>
+      </div>
+
+      <button id="createSession" class="btn btn-primary">Create Session</button>
+    </div>
+
+    <div id="sessionCreated" class="session-created" style="display: none;">
+      <div class="success-message">
+        <h2>Session Created!</h2>
+        <p>Distribute these unique voting links to each author (keep one for yourself to view results):</p>
+      </div>
+
+      <div class="form-group">
+        <label>Results Page (share with all authors)</label>
+        <div class="link-container">
+          <input type="text" id="resultsLink" readonly>
+          <button class="btn btn-copy" data-target="resultsLink">Copy</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Voting Links (one per author, excluding yourself)</label>
+        <div id="votingLinks" class="voting-links"></div>
+      </div>
+
+      <div class="warning-box">
+        <strong>Important:</strong> Save these links now! They cannot be retrieved later.
+        Each link can only be used by one person.
+      </div>
+
+      <button id="createAnother" class="btn btn-secondary">Create Another Session</button>
+    </div>
+  </div>
+
+  <script src="js/firebase-config.js"></script>
+  <script src="js/create.js"></script>
+  <script>
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+    function setTheme(dark) {
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      themeToggle.innerHTML = dark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    }
+
+    // Initialize theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setTheme(savedTheme === 'dark');
+    } else {
+      setTheme(prefersDark.matches);
+    }
+
+    themeToggle.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      setTheme(!isDark);
+    });
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</body>
+</html>

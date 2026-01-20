@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vote - Author Ordering</title>
+  <link rel="stylesheet" href="../stylesheet.css">
+  <link rel="stylesheet" href="voting.css">
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+</head>
+<body>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <div class="container voting-container">
+    <div id="loading" class="loading">
+      <div class="spinner"></div>
+      <p>Loading session...</p>
+    </div>
+
+    <div id="errorState" class="error-state" style="display: none;">
+      <h2>Invalid Link</h2>
+      <p id="errorMessage">This voting link is invalid or has expired.</p>
+      <a href="create.html" class="btn btn-primary">Create New Session</a>
+    </div>
+
+    <div id="voteContent" style="display: none;">
+      <h1 class="voting-title" id="sessionTitle">Author Ordering Vote</h1>
+      <p class="voting-subtitle">Drag authors to reorder by your preference (first = most preferred for first author)</p>
+
+      <div class="vote-section">
+        <h3>Author Order</h3>
+        <p class="section-help">Drag to reorder. Position 1 is your top choice for first author.</p>
+        <ul id="authorList" class="author-sortable"></ul>
+      </div>
+
+      <div class="vote-section">
+        <h3>Co-First Authors</h3>
+        <p class="section-help">How many authors should share first authorship?</p>
+        <div class="co-first-selector">
+          <label for="coFirstCount">Number of co-first authors:</label>
+          <select id="coFirstCount"></select>
+        </div>
+        <div id="coFirstPreview" class="co-first-preview"></div>
+      </div>
+
+      <div class="vote-actions">
+        <button id="submitVote" class="btn btn-primary">Submit Vote</button>
+        <p id="voteStatus" class="vote-status"></p>
+      </div>
+
+      <div class="vote-info">
+        <p><strong>Note:</strong> You can change your vote at any time by revisiting this link.</p>
+        <a id="resultsLink" href="#" class="btn btn-secondary">View Results</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/firebase-config.js"></script>
+  <script src="js/vote.js"></script>
+  <script>
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+    function setTheme(dark) {
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      themeToggle.innerHTML = dark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setTheme(savedTheme === 'dark');
+    } else {
+      setTheme(prefersDark.matches);
+    }
+
+    themeToggle.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      setTheme(!isDark);
+    });
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</body>
+</html>

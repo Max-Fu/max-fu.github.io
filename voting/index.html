@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voting Results - Author Ordering</title>
+  <link rel="stylesheet" href="../stylesheet.css">
+  <link rel="stylesheet" href="voting.css">
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+</head>
+<body>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <div class="container voting-container">
+    <div id="loading" class="loading">
+      <div class="spinner"></div>
+      <p>Loading results...</p>
+    </div>
+
+    <div id="landingPage" style="display: none;">
+      <h1 class="voting-title">Author Ordering Vote</h1>
+      <p class="voting-subtitle">Anonymous voting system for determining paper author order</p>
+
+      <div class="landing-options">
+        <div class="landing-card">
+          <h3>Create a Session</h3>
+          <p>Start a new voting session for your paper's author ordering.</p>
+          <a href="create.html" class="btn btn-primary">Create Session</a>
+        </div>
+
+        <div class="landing-card">
+          <h3>View Results</h3>
+          <p>Enter a session ID to view voting results.</p>
+          <div class="session-input">
+            <input type="text" id="sessionIdInput" placeholder="Enter session ID">
+            <button id="viewResultsBtn" class="btn btn-secondary">View</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="errorState" class="error-state" style="display: none;">
+      <h2>Session Not Found</h2>
+      <p id="errorMessage">The requested voting session could not be found.</p>
+      <a href="create.html" class="btn btn-primary">Create New Session</a>
+    </div>
+
+    <div id="resultsContent" style="display: none;">
+      <h1 class="voting-title" id="sessionTitle">Voting Results</h1>
+      <p class="voting-subtitle">Live results update automatically as votes come in</p>
+
+      <div class="progress-section">
+        <div class="progress-header">
+          <span>Voting Progress</span>
+          <span id="voteCount">0 of 0 votes</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+
+      <div class="results-section">
+        <h3>Ranking Results (Borda Count)</h3>
+        <p class="section-help">Higher scores indicate stronger preference for earlier authorship</p>
+        <div id="rankingResults" class="ranking-results"></div>
+      </div>
+
+      <div class="results-section">
+        <h3>Co-First Author Consensus</h3>
+        <p class="section-help">Distribution of votes for number of co-first authors</p>
+        <div id="coFirstResults" class="co-first-results"></div>
+      </div>
+
+      <div class="results-section">
+        <h3>Suggested Order</h3>
+        <div id="suggestedOrder" class="suggested-order"></div>
+      </div>
+
+      <div class="results-actions">
+        <button id="refreshBtn" class="btn btn-secondary">
+          <i class="fas fa-sync-alt"></i> Refresh
+        </button>
+        <a href="create.html" class="btn btn-secondary">Create New Session</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/firebase-config.js"></script>
+  <script src="js/results.js"></script>
+  <script>
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+    function setTheme(dark) {
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      themeToggle.innerHTML = dark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setTheme(savedTheme === 'dark');
+    } else {
+      setTheme(prefersDark.matches);
+    }
+
+    themeToggle.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      setTheme(!isDark);
+    });
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</body>
+</html>
