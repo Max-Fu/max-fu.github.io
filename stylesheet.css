@@ -380,6 +380,148 @@ span.highlight {
   border-radius: 2px;
 }
 
+/* ===== Publication category filter ===== */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 28px;
+}
+
+.filter-btn {
+  font-family: var(--body-font);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  padding: 7px 16px;
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.filter-btn:hover {
+  color: var(--text-color);
+  border-color: var(--link-color);
+  transform: translateY(-1px);
+}
+
+.filter-btn.active {
+  color: var(--bg-color);
+  background: var(--link-color);
+  border-color: var(--link-color);
+}
+
+.filter-btn .count {
+  margin-left: 6px;
+  font-size: 0.82em;
+  font-weight: 500;
+  opacity: 0.65;
+}
+
+/* ===== Publication cards ===== */
+.pub-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.pub-card {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pub-card:last-child {
+  border-bottom: none;
+}
+
+.pub-card.hide {
+  display: none;
+}
+
+.pub-media {
+  flex: 0 0 300px;
+  max-width: 300px;
+}
+
+.pub-info {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.pub-authors {
+  margin: 7px 0 5px;
+}
+
+.pub-venue {
+  margin-top: 2px;
+}
+
+/* Category tag chips */
+.pub-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 9px;
+}
+
+.tag {
+  font-family: var(--body-font);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 999px;
+  line-height: 1.4;
+}
+
+.tag-agents { color: #8a5320; background: rgba(180, 110, 45, 0.14); }
+.tag-pretraining { color: #35637d; background: rgba(70, 130, 170, 0.14); }
+.tag-data { color: #4f7040; background: rgba(100, 150, 80, 0.16); }
+.tag-tactile { color: #93425a; background: rgba(180, 90, 120, 0.14); }
+.tag-misc { color: #63605b; background: rgba(130, 130, 130, 0.16); }
+
+[data-theme="dark"] .tag-agents { color: #dcae6f; background: rgba(200, 140, 70, 0.20); }
+[data-theme="dark"] .tag-pretraining { color: #8bbcda; background: rgba(100, 160, 200, 0.20); }
+[data-theme="dark"] .tag-data { color: #a3c98d; background: rgba(130, 180, 100, 0.20); }
+[data-theme="dark"] .tag-tactile { color: #dc8ea4; background: rgba(200, 120, 150, 0.20); }
+[data-theme="dark"] .tag-misc { color: #b4b1ab; background: rgba(160, 160, 160, 0.20); }
+
+/* Filter reveal animation */
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.pub-card.animate-in {
+  animation: cardIn 0.4s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pub-card.animate-in { animation: none; }
+}
+
+@media (max-width: 768px) {
+  .pub-card {
+    flex-direction: column;
+    gap: 14px;
+    align-items: stretch;
+    padding: 22px 0;
+  }
+
+  .pub-media {
+    flex: none;
+    max-width: 250px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
 /* Custom styling for publication entries */
 tr {
   transition: background-color 0.2s ease;

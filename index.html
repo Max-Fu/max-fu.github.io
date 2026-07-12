@@ -23,13 +23,10 @@
         <td style="width:60%;vertical-align:middle">
           <name>Letian (Max) Fu</name>
           <p>
-            I am an incoming research scientist at Google DeepMind Robotics. I received my PhD from UC Berkeley advised by Professor <a href="https://goldberg.berkeley.edu/">Ken Goldberg</a>. Previously, I was a research intern at NVIDIA, working with <a href="https://jimfan.me/">Jim Fan</a> and <a href="https://yukezhu.me/">Yuke Zhu</a>.
+            I am a research scientist at Google DeepMind Robotics. I received my PhD from UC Berkeley advised by Professor <a href="https://goldberg.berkeley.edu/">Ken Goldberg</a>. Previously, I was a research intern at NVIDIA, working with <a href="https://jimfan.me/">Jim Fan</a> and <a href="https://yukezhu.me/">Yuke Zhu</a>.
           </p>
           <p>
-            I work on multi-modal models for both perception and robot learning. I am interested in scaling robot foundation models by investigating various approaches to expand robot datasets and leveraging priors from existing foundation models. See dissertation <a href="https://www2.eecs.berkeley.edu/Pubs/TechRpts/2026/EECS-2026-118.html">here</a>.
-          </p>
-          <p>
-            I received B.A./M.S. in Computer Science and Applied Mathematics from UC Berkeley. 
+            I work on agents and foundation models for robot learning. See dissertation <a href="https://www2.eecs.berkeley.edu/Pubs/TechRpts/2026/EECS-2026-118.html">here</a>.
           </p>
           <p style="text-align:center">
             <a href="mailto:max.fu.letian@berkeley.edu"><i class="fas fa-envelope"></i> Email</a> &nbsp/&nbsp
@@ -48,287 +45,377 @@
 
     <heading>Publications</heading>
 
-    <table>
+    <!-- Category filter bar -->
+    <div class="filter-bar" id="filter-bar">
+      <button class="filter-btn active" data-cat="agents">Agents</button>
+      <button class="filter-btn" data-cat="pretraining">Pre-training</button>
+      <button class="filter-btn" data-cat="data">Data</button>
+      <button class="filter-btn" data-cat="tactile">Tactile</button>
+      <button class="filter-btn" data-cat="all">All</button>
+    </div>
+
+    <div class="pub-grid" id="pub-grid">
+
       <!-- CaP-X -->
-      <tr>
-        <td style="width:40%;vertical-align:middle">
+      <article class="pub-card" data-id="capx" data-cats="agents">
+        <div class="pub-media">
           <div class="one">
-            <video width='300' muted autoplay loop>
+            <video width='300' muted autoplay loop playsinline>
               <source src="images/capx.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
-        </td>
-        <td style="width:60%;vertical-align:middle">
+        </div>
+        <div class="pub-info">
           <papertitle><a href="https://capgym.github.io/">CaP-X: A Framework for Benchmarking and Improving Coding Agents for Robot Manipulation</a></papertitle>
-          <br>
-          <b>Letian Fu*</b>, Justin Yu*, Karim El-Refai*, Ethan Kou*, Haoru Xue*, Huang Huang, Wenli Xiao, Guanzhi Wang, Fei-Fei Li, Guanya Shi, Jiajun Wu, Shankar Sastry, Yuke Zhu, Ken Goldberg, Linxi Fan
-          <br>
-          <small>*Equal contribution</small>
-          <br>
-          <em>Arxiv</em> 2026, <a href="https://arxiv.org/abs/2603.22435"><i class="fas fa-file-pdf"></i> Paper</a>, <a href="https://capgym.github.io/"><i class="fas fa-globe"></i> Website</a>, <a href="https://github.com/capgym/cap-x"><i class="fab fa-github"></i> Code</a>
-        </td>
-      </tr>
+          <div class="pub-authors">
+            <b>Letian Fu*</b>, Justin Yu*, Karim El-Refai*, Ethan Kou*, Haoru Xue*, Huang Huang, Wenli Xiao, Guanzhi Wang, Fei-Fei Li, Guanya Shi, Jiajun Wu, Shankar Sastry, Yuke Zhu, Ken Goldberg, Linxi Fan
+            <br><small>*Equal contribution</small>
+          </div>
+          <div class="pub-venue"><em>Arxiv</em> 2026, <a href="https://arxiv.org/abs/2603.22435"><i class="fas fa-file-pdf"></i> Paper</a>, <a href="https://capgym.github.io/"><i class="fas fa-globe"></i> Website</a>, <a href="https://github.com/capgym/cap-x"><i class="fab fa-github"></i> Code</a></div>
+        </div>
+      </article>
+
+      <!-- ENPIRE -->
+      <article class="pub-card" data-id="enpire" data-cats="agents">
+        <div class="pub-media">
+          <div class="one">
+            <video width='300' muted autoplay loop playsinline>
+              <source src="images/enpire.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="pub-info">
+          <papertitle><a href="https://research.nvidia.com/labs/gear/enpire/">ENPIRE: Agentic Robot Policy Self-Improvement in the Real World</a></papertitle>
+          <div class="pub-authors">
+            Wenli Xiao, Jia Xie, Tonghe Zhang, Haotian Lin, <b>Letian "Max" Fu</b>, Haoru Xue, Jalen Lu, Yi Yang, Cunxi Dai, Zi Wang, Jimmy Wu, Guanzhi Wang, S. Shankar Sastry, Ken Goldberg, Linxi "Jim" Fan, Yuke Zhu, Guanya Shi
+          </div>
+          <div class="pub-venue"><em>Arxiv</em> 2026, <a href="https://arxiv.org/abs/2606.19980"><i class="fas fa-file-pdf"></i> Paper</a>, <a href="https://research.nvidia.com/labs/gear/enpire/"><i class="fas fa-globe"></i> Website</a></div>
+        </div>
+      </article>
+
+      <!-- ASPIRE -->
+      <article class="pub-card" data-id="aspire" data-cats="agents">
+        <div class="pub-media">
+          <div class="one">
+            <video width='300' muted autoplay loop playsinline>
+              <source src="images/aspire.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="pub-info">
+          <papertitle><a href="https://research.nvidia.com/labs/gear/aspire/">ASPIRE: Agentic Skills Discovery for Robotics</a></papertitle>
+          <div class="pub-authors">
+            Runyu Lu, Yubo Wu, Ethan Kou, <b>Max Fu</b>, Wenli Xiao, Ajay Mandlekar, Yinzhen Xu, Guanya Shi, Ken Goldberg, Ang Chen, Mosharaf Chowdhury, Yuke Zhu, Linxi "Jim" Fan, Guanzhi Wang
+          </div>
+          <div class="pub-venue"><em>Arxiv</em> 2026, <a href="https://research.nvidia.com/labs/gear/aspire/"><i class="fas fa-globe"></i> Website</a></div>
+        </div>
+      </article>
+
+      <!-- RATS -->
+      <article class="pub-card" data-id="rats" data-cats="agents">
+        <div class="pub-media">
+          <div class="one">
+            <video width='300' muted autoplay loop playsinline>
+              <source src="images/rats.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="pub-info">
+          <papertitle><a href="https://playful-rats.github.io/">Playful Agentic Robot Learning</a></papertitle>
+          <div class="pub-authors">
+            Junyi Zhang, Jiaxin Ge, Hanjun Yoo, <b>Letian Fu</b>, Zihan Yang, Yaowei Liu, Raj Saravanan, Shaofeng Yin, Justin Yu, Dantong Niu, Zirui Wang, Roei Herzig, Ken Goldberg, Yutong Bai, David M. Chan, Ion Stoica, Angjoo Kanazawa, Jiahui Lei, Haiwen Feng, Trevor Darrell
+          </div>
+          <div class="pub-venue"><em>Arxiv</em> 2026, <a href="https://arxiv.org/abs/2606.19419"><i class="fas fa-file-pdf"></i> Paper</a>, <a href="https://playful-rats.github.io/"><i class="fas fa-globe"></i> Website</a>, <a href="https://github.com/Playful-RATs/rats"><i class="fab fa-github"></i> Code</a></div>
+        </div>
+      </article>
+
+      <!-- GaP -->
+      <article class="pub-card" data-id="gap" data-cats="agents">
+        <div class="pub-media">
+          <div class="one">
+            <video width='300' muted autoplay loop playsinline>
+              <source src="images/gap.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="pub-info">
+          <papertitle><a href="https://graph-robots.github.io/gap/">GaP: A Graph-as-Policy Multi-Agent Self-Learning Harness for Variational Automation Tasks</a></papertitle>
+          <div class="pub-authors">
+            Kaiyuan Chen, Shuangyu Xie, <b>Letian Fu</b>, Justin Yu, William Pacini, Sandeep Bajamahal, Hudson Kim, Jaimyn Drake, Daehwa Kim, Haoru Xue, Jonathan Francis, Christian Juette, Peter Schaldenbrand, Muhammet Yunus Seker, Ruwan Wickramarachchi, Uksang Yoo, Guanzhi Wang, Adithyavairavan Murali, Balakumar Sundaralingam, S. Shankar Sastry, Spencer Huang, Yuke Zhu, Linxi "Jim" Fan, Ken Goldberg
+          </div>
+          <div class="pub-venue"><em>Arxiv</em> 2026, <a href="https://arxiv.org/abs/2607.05369"><i class="fas fa-file-pdf"></i> Paper</a>, <a href="https://graph-robots.github.io/gap/"><i class="fas fa-globe"></i> Website</a>, <a href="https://github.com/graph-robots/graph-as-policy"><i class="fab fa-github"></i> Code</a></div>
+        </div>
+      </article>
 
       <!-- EgoScale -->
-      <tr>
-        <td style="width:40%;vertical-align:middle">
+      <article class="pub-card" data-id="egoscale" data-cats="pretraining">
+        <div class="pub-media">
           <div class="one">
-            <video width='300' muted autoplay loop>
+            <video width='300' muted autoplay loop playsinline>
               <source src="images/egoscale.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
-        </td>
-        <td style="width:60%;vertical-align:middle">
+        </div>
+        <div class="pub-info">
           <papertitle><a href="https://research.nvidia.com/labs/gear/egoscale/">EgoScale: Scaling Dexterous Manipulation with Diverse Egocentric Human Data</a></papertitle>
-          <br>
-          Ruijie Zheng, Dantong Niu, Yuqi Xie, Jing Wang, Mengda Xu, Yunfan Jiang, Fernando Castaneda, Fengyuan Hu, You Liang Tan, <b>Letian Fu</b>, Trevor Darrell, Furong Huang, Yuke Zhu, Danfei Xu, Linxi Fan
-          <br>
-          <em>Arxiv</em> 2026, <a href="https://arxiv.org/abs/2602.16710"><i class="fas fa-file-pdf"></i> Paper</a>, <a href="https://research.nvidia.com/labs/gear/egoscale/"><i class="fas fa-globe"></i> Website</a>
-        </td>
-      </tr>
+          <div class="pub-authors">
+            Ruijie Zheng, Dantong Niu, Yuqi Xie, Jing Wang, Mengda Xu, Yunfan Jiang, Fernando Castaneda, Fengyuan Hu, You Liang Tan, <b>Letian Fu</b>, Trevor Darrell, Furong Huang, Yuke Zhu, Danfei Xu, Linxi Fan
+          </div>
+          <div class="pub-venue"><em>Arxiv</em> 2026, <a href="https://arxiv.org/abs/2602.16710"><i class="fas fa-file-pdf"></i> Paper</a>, <a href="https://research.nvidia.com/labs/gear/egoscale/"><i class="fas fa-globe"></i> Website</a></div>
+        </div>
+      </article>
 
       <!-- GR00T N1.6 -->
-      <tr>
-        <td style="width:40%;vertical-align:middle">
+      <article class="pub-card" data-id="grootn16" data-cats="pretraining">
+        <div class="pub-media">
           <div class="one">
-            <video width='300' muted autoplay loop>
+            <video width='300' muted autoplay loop playsinline>
               <source src="images/groot_n16.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
-        </td>
-        <td style="width:60%;vertical-align:middle">
+        </div>
+        <div class="pub-info">
           <papertitle><a href="https://research.nvidia.com/labs/gear/gr00t-n1_6/">GR00T N1.6: An Improved Open Foundation Model for Generalist Humanoid Robots</a></papertitle>
-          <br>
-          NVIDIA GEAR Team (including <b>Letian Fu</b>)
-          <br>
-          <em>Technical Report</em> 2025, <a href="https://research.nvidia.com/labs/gear/gr00t-n1_6/"><i class="fas fa-globe"></i> Website</a>, <a href="https://github.com/NVIDIA/Isaac-GR00T"><i class="fab fa-github"></i> Code</a>, <a href="https://huggingface.co/nvidia/GR00T-N1.6-3B/"><i class="fas fa-cube"></i> Model</a>
-        </td>
-      </tr>
+          <div class="pub-authors">
+            NVIDIA GEAR Team (including <b>Letian Fu</b>)
+          </div>
+          <div class="pub-venue"><em>Technical Report</em> 2025, <a href="https://research.nvidia.com/labs/gear/gr00t-n1_6/"><i class="fas fa-globe"></i> Website</a>, <a href="https://github.com/NVIDIA/Isaac-GR00T"><i class="fab fa-github"></i> Code</a>, <a href="https://huggingface.co/nvidia/GR00T-N1.6-3B/"><i class="fas fa-cube"></i> Model</a></div>
+        </div>
+      </article>
 
       <!-- VisGym -->
-      <tr>
-        <td style="width:40%;vertical-align:middle">
+      <article class="pub-card" data-id="visgym" data-cats="agents">
+        <div class="pub-media">
           <div class="one">
             <img src="images/visgym.png" alt="VisGym figure">
           </div>
-        </td>
-        <td style="width:60%;vertical-align:middle">
-          <papertitle><a href="https://visgym.github.io/">VisGym: 
-            Diverse, Customizable, Scalable Environments for Multimodal Agents</a></papertitle>
-          <br>
-          Zirui Wang*, Junyi Zhang*, Jiaxin Ge*, Long Lian, <b>Letian Fu</b>, Lisa Dunlap, Ken Goldberg, Xudong Wang, Ion Stoica, David M. Chan, Sewon Min, Joseph E. Gonzalez
-          <br>
-          <small>*Equal contribution</small>
-          <br>
-          <em>Arxiv</em> 2026, <a href="https://arxiv.org/pdf/2601.16973"><i class="fas fa-file-pdf"></i> Paper</a>, <a href="https://visgym.github.io/"><i class="fas fa-globe"></i> Website</a>, <a href="https://github.com/visgym/VIsGym"><i class="fab fa-github"></i> Code</a>
-        </td>
-      </tr>
-      
+        </div>
+        <div class="pub-info">
+          <papertitle><a href="https://visgym.github.io/">VisGym: Diverse, Customizable, Scalable Environments for Multimodal Agents</a></papertitle>
+          <div class="pub-authors">
+            Zirui Wang*, Junyi Zhang*, Jiaxin Ge*, Long Lian, <b>Letian Fu</b>, Lisa Dunlap, Ken Goldberg, Xudong Wang, Ion Stoica, David M. Chan, Sewon Min, Joseph E. Gonzalez
+            <br><small>*Equal contribution</small>
+          </div>
+          <div class="pub-venue"><em>Arxiv</em> 2026, <a href="https://arxiv.org/pdf/2601.16973"><i class="fas fa-file-pdf"></i> Paper</a>, <a href="https://visgym.github.io/"><i class="fas fa-globe"></i> Website</a>, <a href="https://github.com/visgym/VIsGym"><i class="fab fa-github"></i> Code</a></div>
+        </div>
+      </article>
+
       <!-- Real2Render2Real -->
-      <tr>
-        <td style="width:40%;vertical-align:middle">
+      <article class="pub-card" data-id="r2r2r" data-cats="data">
+        <div class="pub-media">
           <div class="one">
             <img src="images/real2render2real.jpg" alt="Real2Render2Real figure">
           </div>
-        </td>
-        <td style="width:60%;vertical-align:middle">
-          <papertitle><a href="https://real2render2real.com/">Real2Render2Real: 
-            Scaling Robotic Manipulation Data Without Dynamics Simulation or Robot Hardware</a></papertitle>
-          <br>
-          Justin Yu*, <b>Letian Fu*</b>, Huang Huang, Karim El-Refai, Rares Ambrus, Richard Cheng, Muhammad Zubair Irshad, Ken Goldberg
-          <br>
-          <small>*Equal contribution</small>
-          <br>
-          <em>CoRL</em> 2025, <span class="publication-badge oral">Oral Presentation</span>, <a href="https://openreview.net/forum?id=VVhAhzr2WV"><i class="fas fa-file-pdf"></i> Paper</a>, <a href="https://real2render2real.com/"><i class="fas fa-globe"></i> Website</a>, <a href="https://github.com/uynitsuj/real2render2real"><i class="fab fa-github"></i> Code</a>
-        </td>
-      </tr>
+        </div>
+        <div class="pub-info">
+          <papertitle><a href="https://real2render2real.com/">Real2Render2Real: Scaling Robotic Manipulation Data Without Dynamics Simulation or Robot Hardware</a></papertitle>
+          <div class="pub-authors">
+            Justin Yu*, <b>Letian Fu*</b>, Huang Huang, Karim El-Refai, Rares Ambrus, Richard Cheng, Muhammad Zubair Irshad, Ken Goldberg
+            <br><small>*Equal contribution</small>
+          </div>
+          <div class="pub-venue"><em>CoRL</em> 2025, <span class="publication-badge oral">Oral Presentation</span>, <a href="https://openreview.net/forum?id=VVhAhzr2WV"><i class="fas fa-file-pdf"></i> Paper</a>, <a href="https://real2render2real.com/"><i class="fas fa-globe"></i> Website</a>, <a href="https://github.com/uynitsuj/real2render2real"><i class="fab fa-github"></i> Code</a></div>
+        </div>
+      </article>
 
       <!-- OTTER -->
-      <tr>
-        <td style="width:40%;vertical-align:middle">
+      <article class="pub-card" data-id="otter" data-cats="pretraining">
+        <div class="pub-media">
           <div class="one">
             <img src="images/otter_figure-white.png" alt="OTTER figure">
           </div>
-        </td>
-        <td style="width:60%;vertical-align:middle">
+        </div>
+        <div class="pub-info">
           <papertitle><a href="https://ottervla.github.io/">🦦OTTER: A Vision-Language-Action Model with Text-Aware Visual Feature Extraction</a></papertitle>
-          <br>
-          Huang Huang*, Fangchen Liu*, <b>Letian Fu*</b>, Tingfan Wu, Mustafa Mukadam, Jitendra Malik, Ken Goldberg, Pieter Abbeel
-          <br>
-          <small>*Equal contribution</small>
-          <br>
-          <em>ICML</em> 2025, <a href="http://arxiv.org/abs/2503.03734"><i class="fas fa-file-pdf"></i> Paper</a>, <a href="https://ottervla.github.io/"><i class="fas fa-globe"></i> Website</a>, <a href="https://github.com/Max-Fu/otter"><i class="fab fa-github"></i> Code</a>
-        </td>
-      </tr>
+          <div class="pub-authors">
+            Huang Huang*, Fangchen Liu*, <b>Letian Fu*</b>, Tingfan Wu, Mustafa Mukadam, Jitendra Malik, Ken Goldberg, Pieter Abbeel
+            <br><small>*Equal contribution</small>
+          </div>
+          <div class="pub-venue"><em>ICML</em> 2025, <a href="http://arxiv.org/abs/2503.03734"><i class="fas fa-file-pdf"></i> Paper</a>, <a href="https://ottervla.github.io/"><i class="fas fa-globe"></i> Website</a>, <a href="https://github.com/Max-Fu/otter"><i class="fab fa-github"></i> Code</a></div>
+        </div>
+      </article>
 
       <!-- ICRT -->
-      <tr>
-        <td style="width:40%;vertical-align:middle">
+      <article class="pub-card" data-id="icrt" data-cats="pretraining">
+        <div class="pub-media">
           <div class="one">
             <img src="images/icrt_splash.png" alt="ICRT figure" class="png-image">
           </div>
-        </td>
-        <td style="width:60%;vertical-align:middle">
+        </div>
+        <div class="pub-info">
           <papertitle><a href="https://icrt.dev/">In-Context Imitation Learning via Next-Token Prediction</a></papertitle>
-          <br>
-          <b>Letian Fu*</b>, Huang Huang*, Gaurav Datta*, Lawrence Yunliang Chen, William Chung-Ho Panitch, Fangchen Liu, Hui Li, Ken Goldberg 
-          <br>
-          <small>*Equal contribution</small>
-          <br>
-          <em>ICRA</em> 2025, <a href="https://icrt.dev/files/icrt.pdf"><i class="fas fa-file-pdf"></i> Paper</a>, <a href="https://icrt.dev/"><i class="fas fa-globe"></i> Website</a>, <a href="https://github.com/Max-Fu/icrt"><i class="fab fa-github"></i> Code</a>, <a href="https://huggingface.co/datasets/Ravenh97/ICRT-MT"><i class="fas fa-database"></i> Dataset</a>
-        </td>
-      </tr>
+          <div class="pub-authors">
+            <b>Letian Fu*</b>, Huang Huang*, Gaurav Datta*, Lawrence Yunliang Chen, William Chung-Ho Panitch, Fangchen Liu, Hui Li, Ken Goldberg
+            <br><small>*Equal contribution</small>
+          </div>
+          <div class="pub-venue"><em>ICRA</em> 2025, <a href="https://icrt.dev/files/icrt.pdf"><i class="fas fa-file-pdf"></i> Paper</a>, <a href="https://icrt.dev/"><i class="fas fa-globe"></i> Website</a>, <a href="https://github.com/Max-Fu/icrt"><i class="fab fa-github"></i> Code</a>, <a href="https://huggingface.co/datasets/Ravenh97/ICRT-MT"><i class="fas fa-database"></i> Dataset</a></div>
+        </div>
+      </article>
+
+      <!-- T-Rex -->
+      <article class="pub-card" data-id="trex" data-cats="pretraining data tactile">
+        <div class="pub-media">
+          <div class="one">
+            <video width='300' muted autoplay loop playsinline>
+              <source src="images/trex.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="pub-info">
+          <papertitle><a href="https://tactile-rex.github.io/">T-Rex: Tactile-Reactive Dexterous Manipulation</a></papertitle>
+          <div class="pub-authors">
+            Dantong Niu, Zhuoyang Liu, Zekai Wang, Boning Shao, Zhao-Heng Yin, Anirudh Pai, Yuvan Sharma, Stefano Saravalle, Ruijie Zheng, Jing Wang, Ryan Punamiya, Mengda Xu, Yuqi Xie, Yunfan Jiang, <b>Letian Fu</b>, Konstantinos Kallidromitis, Matteo Gioia, Junyi Zhang, Jiaxin Ge, Haiwen Feng, Fabio Galasso, Wei Zhan, David M. Chan, Yutong Bai, Roei Herzig, Jiahui Lei, Li Fei-Fei, Ken Goldberg, Jitendra Malik, Pieter Abbeel, Yuke Zhu, Danfei Xu, Linxi Fan, Trevor Darrell
+          </div>
+          <div class="pub-venue"><em>Arxiv</em> 2026, <a href="https://arxiv.org/abs/2606.17055"><i class="fas fa-file-pdf"></i> Paper</a>, <a href="https://tactile-rex.github.io/"><i class="fas fa-globe"></i> Website</a>, <a href="https://github.com/ZhuoyangLiu2005/T-Rex"><i class="fab fa-github"></i> Code</a></div>
+        </div>
+      </article>
 
       <!-- TVL -->
-      <tr>
-        <td style="width:40%;vertical-align:middle">
+      <article class="pub-card" data-id="tvl" data-cats="data tactile">
+        <div class="pub-media">
           <div class="one">
             <img src="images/tvl_splash.jpg" alt="TVL figure">
           </div>
-        </td>
-        <td style="width:60%;vertical-align:middle">
+        </div>
+        <div class="pub-info">
           <papertitle><a href="https://tactile-vlm.github.io">A Touch, Vision, and Language Dataset for Multimodal Alignment</a></papertitle>
-          <br>
-          <b>Letian Fu</b>, Gaurav Datta*, Huang Huang*, William Chung-Ho Panitch*, Jaimyn Drake*, Joseph Ortiz, Mustafa Mukadam, Mike Lambeta, Roberto Calandra, Ken Goldberg 
-          <br>
-          <small>*Equal contribution</small>
-          <br>
-          <em>ICML</em> 2024, <span class="publication-badge oral">Oral Presentation</span>, <a href="https://openreview.net/forum?id=tFEOOH9eH0"><i class="fas fa-file-alt"></i> OpenReview</a>, <a href="https://tactile-vlm.github.io/"><i class="fas fa-globe"></i> Website</a>, <a href="https://github.com/Max-Fu/tvl"><i class="fab fa-github"></i> Code</a>, <a href="https://huggingface.co/datasets/mlfu7/Touch-Vision-Language-Dataset"><i class="fas fa-database"></i> Dataset</a>
-        </td>
-      </tr>
+          <div class="pub-authors">
+            <b>Letian Fu</b>, Gaurav Datta*, Huang Huang*, William Chung-Ho Panitch*, Jaimyn Drake*, Joseph Ortiz, Mustafa Mukadam, Mike Lambeta, Roberto Calandra, Ken Goldberg
+            <br><small>*Equal contribution</small>
+          </div>
+          <div class="pub-venue"><em>ICML</em> 2024, <span class="publication-badge oral">Oral Presentation</span>, <a href="https://openreview.net/forum?id=tFEOOH9eH0"><i class="fas fa-file-alt"></i> OpenReview</a>, <a href="https://tactile-vlm.github.io/"><i class="fas fa-globe"></i> Website</a>, <a href="https://github.com/Max-Fu/tvl"><i class="fab fa-github"></i> Code</a>, <a href="https://huggingface.co/datasets/mlfu7/Touch-Vision-Language-Dataset"><i class="fas fa-database"></i> Dataset</a></div>
+        </div>
+      </article>
 
       <!-- CrossMAE -->
-      <tr>
-        <td style="width:40%;vertical-align:middle">
+      <article class="pub-card" data-id="crossmae" data-cats="pretraining">
+        <div class="pub-media">
           <div class="one">
             <img src="images/crossmae_website.jpeg" alt="CrossMAE figure">
           </div>
-        </td>
-        <td style="width:60%;vertical-align:middle">
+        </div>
+        <div class="pub-info">
           <papertitle><a href="https://crossmae.github.io/">Rethinking Patch Dependence for Masked Autoencoders</a></papertitle>
-          <br>
-          <b>Letian Fu</b>*, Long Lian*, Renhao Wang, Baifeng Shi, Xudong Wang, Adam Yala†, Trevor Darrell†, Alexei A Efros†, Ken Goldberg†
-          <br>
-          <small>*Equal contribution, †Equal advising</small>
-          <br>
-          <em>TMLR</em> 2025, <a href="https://arxiv.org/abs/2401.14391"><i class="fas fa-file-pdf"></i> Paper</a>, <a href="https://crossmae.github.io/"><i class="fas fa-globe"></i> Website</a>, <a href="https://github.com/TonyLianLong/CrossMAE"><i class="fab fa-github"></i> Code</a>
-        </td>
-      </tr>
+          <div class="pub-authors">
+            <b>Letian Fu</b>*, Long Lian*, Renhao Wang, Baifeng Shi, Xudong Wang, Adam Yala&dagger;, Trevor Darrell&dagger;, Alexei A Efros&dagger;, Ken Goldberg&dagger;
+            <br><small>*Equal contribution, &dagger;Equal advising</small>
+          </div>
+          <div class="pub-venue"><em>TMLR</em> 2025, <a href="https://arxiv.org/abs/2401.14391"><i class="fas fa-file-pdf"></i> Paper</a>, <a href="https://crossmae.github.io/"><i class="fas fa-globe"></i> Website</a>, <a href="https://github.com/TonyLianLong/CrossMAE"><i class="fab fa-github"></i> Code</a></div>
+        </div>
+      </article>
 
       <!-- RPT -->
-      <tr>
-        <td style="width:40%;vertical-align:middle">
+      <article class="pub-card" data-id="rpt" data-cats="pretraining">
+        <div class="pub-media">
           <div class="one">
-            <video width='300' muted autoplay loop id="rpt_splash_1">
+            <video width='300' muted autoplay loop playsinline>
               <source src="images/rpt_splash_1.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
-        </td>
-        <td style="width:60%;vertical-align:middle">
+        </div>
+        <div class="pub-info">
           <papertitle><a href="https://robotic-pretrained-transformer.github.io/">Robot Learning with Sensorimotor Pre-training</a></papertitle>
-          <br>
-          Ilija Radosavovic, Baifeng Shi, <b>Letian Fu</b>, Ken Goldberg, Trevor Darrell, Jitendra Malik
-          <br>
-          <em>CoRL</em> 2023, <span class="publication-badge oral">Oral Presentation</span>, <a href="https://openreview.net/forum?id=3gh9hf3R6x"><i class="fas fa-file-alt"></i> OpenReview</a>
-        </td>
-      </tr>
+          <div class="pub-authors">
+            Ilija Radosavovic, Baifeng Shi, <b>Letian Fu</b>, Ken Goldberg, Trevor Darrell, Jitendra Malik
+          </div>
+          <div class="pub-venue"><em>CoRL</em> 2023, <span class="publication-badge oral">Oral Presentation</span>, <a href="https://openreview.net/forum?id=3gh9hf3R6x"><i class="fas fa-file-alt"></i> OpenReview</a></div>
+        </div>
+      </article>
 
       <!-- TacInsertion -->
-      <tr>
-        <td style="width:40%;vertical-align:middle">
+      <article class="pub-card" data-id="tacinsertion" data-cats="tactile">
+        <div class="pub-media">
           <div class="one">
-            <img src="images/tactile_insertion.jpg" alt="Tactile Insertion figure" id='tactile_insertion_1'>
+            <img src="images/tactile_insertion.jpg" alt="Tactile Insertion figure">
           </div>
-        </td>
-        <td style="width:60%;vertical-align:middle">
+        </div>
+        <div class="pub-info">
           <papertitle>Safely Learning Visuo-Tactile Feedback Policies in Real For Industrial Insertion</papertitle>
-          <br>
-          <b>Letian Fu</b>, Huang Huang, Lars Berscheid, Hui Li, Ken Goldberg, Sachin Chitta,
-          <br>
-          <em>ICRA</em> 2023, <a href="https://arxiv.org/abs/2210.01340"><i class="fas fa-file-pdf"></i> arXiv</a>
-        </td>
-      </tr>
+          <div class="pub-authors">
+            <b>Letian Fu</b>, Huang Huang, Lars Berscheid, Hui Li, Ken Goldberg, Sachin Chitta
+          </div>
+          <div class="pub-venue"><em>ICRA</em> 2023, <a href="https://arxiv.org/abs/2210.01340"><i class="fas fa-file-pdf"></i> arXiv</a></div>
+        </div>
+      </article>
 
       <!-- EVO-NERF -->
-      <tr>
-        <td style="width:40%;vertical-align:middle">
+      <article class="pub-card" data-id="evonerf" data-cats="misc">
+        <div class="pub-media">
           <div class="one">
-            <video width='300' muted autoplay loop id="evonerf_splash">
+            <video width='300' muted autoplay loop playsinline>
               <source src="images/evonerf_splash.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
-        </td>
-        <td style="width:60%;vertical-align:middle">
-          <a href="https://sites.google.com/view/evo-nerf">
-            <papertitle>Evo-NeRF: Evolving NeRF for Sequential Robot Grasping</papertitle>
-          </a>
-          <br>
-          Justin Kerr, <b>Letian Fu</b>, Huang Huang, Yahav Avigal, Matthew Tancik, Jeffrey Ichnowski, Angjoo Kanazawa, Ken Goldberg
-          <br>
-          <em>CoRL</em> 2022, <span class="publication-badge oral">Oral Presentation</span>, <a href="https://openreview.net/forum?id=Bxr45keYrf"><i class="fas fa-file-alt"></i> OpenReview</a>
-        </td>
-      </tr>
+        </div>
+        <div class="pub-info">
+          <papertitle><a href="https://sites.google.com/view/evo-nerf">Evo-NeRF: Evolving NeRF for Sequential Robot Grasping</a></papertitle>
+          <div class="pub-authors">
+            Justin Kerr, <b>Letian Fu</b>, Huang Huang, Yahav Avigal, Matthew Tancik, Jeffrey Ichnowski, Angjoo Kanazawa, Ken Goldberg
+          </div>
+          <div class="pub-venue"><em>CoRL</em> 2022, <span class="publication-badge oral">Oral Presentation</span>, <a href="https://openreview.net/forum?id=Bxr45keYrf"><i class="fas fa-file-alt"></i> OpenReview</a></div>
+        </div>
+      </article>
 
       <!-- staxray -->
-      <tr>
-        <td style="width:40%;vertical-align:middle">
+      <article class="pub-card" data-id="staxray" data-cats="misc">
+        <div class="pub-media">
           <div class="one">
             <img src="images/staxray_restack.png" alt="staxray figure">
           </div>
-        </td>
-        <td style="width:60%;vertical-align:middle">
-          <a href="https://sites.google.com/berkeley.edu/stax-ray">
-            <papertitle>Mechanical Search on Shelves with Efficient
-              Stacking and Destacking of Objects</papertitle>
-          </a>
-          <br>
-          <b>Letian Fu</b>*, Huang Huang*, Michael Danielczuk, Chung Min Kim,
-            Zachary Tam, Jeffrey Ichnowski, Anelia Angelova, Brian Ichter, and
-            Ken Goldberg, <small>*Equal contribution</small>
-          <br>
-          <em>ISRR</em> 2022, <a href="https://arxiv.org/pdf/2207.02347.pdf"><i class="fas fa-file-pdf"></i> arXiv</a>
-        </td>
-      </tr>
+        </div>
+        <div class="pub-info">
+          <papertitle><a href="https://sites.google.com/berkeley.edu/stax-ray">Mechanical Search on Shelves with Efficient Stacking and Destacking of Objects</a></papertitle>
+          <div class="pub-authors">
+            <b>Letian Fu</b>*, Huang Huang*, Michael Danielczuk, Chung Min Kim, Zachary Tam, Jeffrey Ichnowski, Anelia Angelova, Brian Ichter, and Ken Goldberg
+            <br><small>*Equal contribution</small>
+          </div>
+          <div class="pub-venue"><em>ISRR</em> 2022, <a href="https://arxiv.org/pdf/2207.02347.pdf"><i class="fas fa-file-pdf"></i> arXiv</a></div>
+        </div>
+      </article>
 
       <!-- LEGS -->
-      <tr>
-        <td style="width:40%;vertical-align:middle">
+      <article class="pub-card" data-id="legs" data-cats="misc">
+        <div class="pub-media">
           <div class="one">
             <img src="images/legs_splash_1.jpg" alt="LEGS figure">
           </div>
-        </td>
-        <td style="width:60%;vertical-align:middle">
-          <a href="https://sites.google.com/view/legsexp-grasping">
-            <papertitle>LEGS: Learning Efficient Grasp Sets for Exploratory Grasping</papertitle>
-          </a>
-          <br>
-          <b>Letian Fu</b>, Michael Danielczuk, Ashwin Balakrishna, Daniel S. Brown, Jeffrey Ichnowski, Eugen Solowjow, Ken Goldberg,
-          <br>
-          <em>ICRA</em> 2022, <a href="https://ieeexplore.ieee.org/abstract/document/9812138"><i class="fas fa-file-alt"></i> IEEE</a>, <a href="https://arxiv.org/abs/2111.15002"><i class="fas fa-file-pdf"></i> arxiv</a>
-        </td>
-      </tr>
+        </div>
+        <div class="pub-info">
+          <papertitle><a href="https://sites.google.com/view/legsexp-grasping">LEGS: Learning Efficient Grasp Sets for Exploratory Grasping</a></papertitle>
+          <div class="pub-authors">
+            <b>Letian Fu</b>, Michael Danielczuk, Ashwin Balakrishna, Daniel S. Brown, Jeffrey Ichnowski, Eugen Solowjow, Ken Goldberg
+          </div>
+          <div class="pub-venue"><em>ICRA</em> 2022, <a href="https://ieeexplore.ieee.org/abstract/document/9812138"><i class="fas fa-file-alt"></i> IEEE</a>, <a href="https://arxiv.org/abs/2111.15002"><i class="fas fa-file-pdf"></i> arxiv</a></div>
+        </div>
+      </article>
 
       <!-- SLAXRAY -->
-      <tr>
-        <td style="width:40%;vertical-align:middle">
+      <article class="pub-card" data-id="slaxray" data-cats="misc">
+        <div class="pub-media">
           <div class="one">
             <img src="images/slaxray_splash_1.jpg" alt="SLAXRAY figure">
           </div>
-        </td>
-        <td style="width:60%;vertical-align:middle">
+        </div>
+        <div class="pub-info">
           <papertitle>Mechanical Search on Shelves using a Novel "Bluction" Tool</papertitle>
-          <br>
-          Huang Huang, Michael Danielczuk, Chung Min Kim, <b>Letian Fu</b>, Zachary Tam, Jeffrey Ichnowski, Anelia Angelova, Brain Ichter, Ken Goldberg,
-          <br>
-          <em>ICRA</em> 2022, <a href="https://ieeexplore.ieee.org/document/9811622"><i class="fas fa-file-alt"></i> IEEE</a>, <a href="https://arxiv.org/abs/2201.08968"><i class="fas fa-file-pdf"></i> arXiv</a>
-        </td>
-      </tr>
-    </table>
+          <div class="pub-authors">
+            Huang Huang, Michael Danielczuk, Chung Min Kim, <b>Letian Fu</b>, Zachary Tam, Jeffrey Ichnowski, Anelia Angelova, Brain Ichter, Ken Goldberg
+          </div>
+          <div class="pub-venue"><em>ICRA</em> 2022, <a href="https://ieeexplore.ieee.org/document/9811622"><i class="fas fa-file-alt"></i> IEEE</a>, <a href="https://arxiv.org/abs/2201.08968"><i class="fas fa-file-pdf"></i> arXiv</a></div>
+        </div>
+      </article>
+
+    </div>
+
     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
       <tr>
         <td style="padding:0px">
@@ -346,7 +433,7 @@
       const themeToggle = document.getElementById('theme-toggle');
       const htmlElement = document.documentElement;
       const icon = themeToggle.querySelector('i');
-      
+
       // Check for saved theme preference or use system preference
       const savedTheme = localStorage.getItem('theme');
       if (savedTheme) {
@@ -356,17 +443,17 @@
         htmlElement.setAttribute('data-theme', 'dark');
         updateIcon('dark');
       }
-      
+
       // Toggle theme on button click
       themeToggle.addEventListener('click', function() {
         const currentTheme = htmlElement.getAttribute('data-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
+
         htmlElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
         updateIcon(newTheme);
       });
-      
+
       // Update icon based on theme
       function updateIcon(theme) {
         if (theme === 'dark') {
@@ -377,6 +464,83 @@
           icon.classList.add('fa-moon');
         }
       }
+    });
+  </script>
+
+  <!-- Publication category filter script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const grid = document.getElementById('pub-grid');
+      if (!grid) return;
+      const cards = Array.from(grid.querySelectorAll('.pub-card'));
+
+      const labels = {
+        agents: 'Agents',
+        pretraining: 'Pre-training',
+        data: 'Data',
+        tactile: 'Tactile',
+        misc: 'Misc'
+      };
+
+      // Explicit display order within each category
+      const orders = {
+        agents: ['capx', 'enpire', 'aspire', 'rats', 'gap', 'visgym'],
+        pretraining: ['grootn16', 'icrt', 'rpt', 'egoscale', 'otter', 'trex', 'crossmae'],
+        data: ['tvl', 'r2r2r', 'trex'],
+        tactile: ['tvl', 'trex', 'tacinsertion']
+      };
+
+      const defaultOrder = cards.map(c => c.dataset.id); // natural DOM order = "All"
+      const byId = {};
+      cards.forEach(c => { byId[c.dataset.id] = c; });
+
+      // Build category tag chips on each card
+      cards.forEach(c => {
+        const tags = document.createElement('div');
+        tags.className = 'pub-tags';
+        c.dataset.cats.split(' ').forEach(cat => {
+          const t = document.createElement('span');
+          t.className = 'tag tag-' + cat;
+          t.textContent = labels[cat] || cat;
+          tags.appendChild(t);
+        });
+        const info = c.querySelector('.pub-info');
+        info.insertBefore(tags, info.firstChild);
+      });
+
+      function applyFilter(cat) {
+        const order = cat === 'all' ? defaultOrder : (orders[cat] || []);
+        cards.forEach(c => c.classList.add('hide'));
+        order.forEach((id, i) => {
+          const c = byId[id];
+          if (!c) return;
+          c.classList.remove('hide');
+          grid.appendChild(c); // reorder into category sequence
+          c.classList.remove('animate-in');
+          void c.offsetWidth;   // force reflow so the animation replays
+          c.style.animationDelay = (i * 45) + 'ms';
+          c.classList.add('animate-in');
+        });
+      }
+
+      const btns = Array.from(document.querySelectorAll('.filter-btn'));
+      btns.forEach(btn => {
+        const cat = btn.dataset.cat;
+        const n = cat === 'all' ? cards.length : (orders[cat] ? orders[cat].length : 0);
+        const cnt = document.createElement('span');
+        cnt.className = 'count';
+        cnt.textContent = n;
+        btn.appendChild(cnt);
+
+        btn.addEventListener('click', function() {
+          btns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          applyFilter(cat);
+        });
+      });
+
+      // Initial reveal
+      applyFilter('agents');
     });
   </script>
 </body>
